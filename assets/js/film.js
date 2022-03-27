@@ -48,6 +48,13 @@ function addThreeFilms(indexFilms, plus) {
     sourceHtml += html;
     contentFilm.innerHTML =sourceHtml;
     lastFilmIndex = indexFilms;
+    const buys = document.querySelectorAll('.col_sub');
+    buys.forEach((buy,index) => {
+        buy.onclick = () =>   {
+            window.localStorage.setItem("user",JSON.stringify(index));
+            window.location = "./book.html"
+        }
+    })
 }
 
 addThreeFilms(lastFilmIndex, 1)
