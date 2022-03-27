@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+.main {
+    max-width: 1920px;
+}
+
+.header {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_left {
+    display: flex;
+    align-items: center;
+}
+
+.header_left_link {
+    text-decoration: none;
+}
+
+.header_img {
+    height: 80px;
+    cursor: pointer;
+}
+
+.header_left_input_group {
+    position: relative;
+    margin-left: 120px;
+}
+
+.header_left_input_group_input {
+    width: 250px;
+    height: 30px;
+    padding: 15px;
+    font-size: 0.8rem;
+    color: #A0A3A7;
+    outline: none;
+}
+
+.header_left_input_group_icon {
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    padding: 4px;
+    font-size: 0.8rem;
+    color: #4e5052;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.header_left_input_group_icon:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.header_right {
+    color: #A0A3A7;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    transition: all 0.1s ease;
+}
+
+.header_right:hover {
+    cursor: pointer;
+    color: #F26B38;
+}
+
+.header_right_login {
+
+}
+
+.header_right_login_icon {
+    padding-right: 5px;
+    position: relative;
+    top: -1px;
+}
+
+.header_right_login_text {
+
+}
+
