@@ -52,7 +52,7 @@ function addThreeFilms(indexFilms, plus) {
     buys.forEach((buy,index) => {
         buy.onclick = () =>   {
             window.localStorage.setItem("user",JSON.stringify(index));
-            window.location = "./book.html"
+            window.location = "./main.html"
         }
     })
 }
@@ -63,11 +63,11 @@ seeMore.addEventListener("click", () => {
     if(cong === 1) {
         if(lastFilmIndex <= films.length -3)
             addThreeFilms(lastFilmIndex,cong);
-        else console.log("Film is over!!")
+        else alert("Film is over!!")
     }
     else {
         if(lastFilmIndex >= 2)
             addThreeFilms(lastFilmIndex,cong);
-        else console.log("Film is over!!")
+        else alert("Film is over!!")
     }
 })
