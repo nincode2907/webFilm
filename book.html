@@ -11,8 +11,16 @@
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font   -->
+    <link rel="preconnect" href="https:///fonts.googleapis.com">
+    <link rel="preconnect" href="https:/fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap"
+        rel="stylesheet">
+
 
 </head>
+
 
 <body>
     <div class="main">
@@ -20,6 +28,110 @@
 
         </div>
         <div class="body">
+            <div class="text__title-body">Movies</div>
+            <div class="contain-film ">
+                <div class="movie-items">
+                    <img src="./assets/img/300_1647316349892.jpg" class="list-film" alt="">
+                </div>
+                <div class="movie-items">
+                    <img src="./assets/img/300_1647316349892.jpg" class="list-film" alt="">
+                </div>
+                <div class="movie-items">
+                    <img src="./assets/img/300_1647316349892.jpg" class="list-film" alt="">
+                </div>
+                <div class="movie-items">
+                    <img src="./assets/img/300_1647316349892.jpg" class="list-film" alt="">
+                </div>
+                <div class="movie-items">
+                    <img src="./assets/img/300_1647316349892.jpg" class="list-film" alt="">
+                </div>
+                <div class="movie-items">
+                    <img src="./assets/img/300_1647316349892.jpg" class="list-film" alt="">
+                </div>
+            </div>
+            <div class="text__title-body">Seat</div>
+            <div class="book-tickets row">
+                <div class="contain-seat col-lg-10">
+                    <div class="seat-all row">
+                        <div class="seat col-lg-1 col-sm-1 col-xs-1">
+                            <label class="seat-empty" for="1">1</label>
+                            <input type="checkbox" name="" id="1">
+                        </div>
+
+
+
+
+                    </div>
+                    <div class="screen">Screen</div>
+                </div>
+
+                <div class="contain__buy-btn col-lg-2">
+                    <button type="submit" class="buy-btn">Buy</button>
+                </div>
+                <div class="contain-time">
+                    <div class="text__title-body">Time</div>
+                    <div class="block-time">18:00 - 20:00</div>
+                    <div class="block-time">13:00 - 15:00</div>
+                    <div class="block-time">8:00 - 9:30</div>
+                    <div class="block-time">11:00 - 13:00</div>
+                </div>
+                <div class="text__title-body">Price</div>
+                <div class="contain-price row">
+                    <img src="./assets/img/300_1647316349892.jpg" class="film-booked col-lg-4" alt="">
+                    <div class="contain-price-items col-lg-4">
+                        <div class="text__title-body">Price Today</div>
+                        <div class="price "></div>
+
+
+                    </div>
+                </div>
+                <div class="text__title-body">Bill</div>
+                <div class="title">Ticket</div>
+                <div class="contain-bill">
+
+                    <table>
+                        <tr>
+                            <td>Poster</td>
+                            <td>Name Movie</td>
+                            <td>Quantity</td>
+                            <td>Seat</td>
+                            <td>Price</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="img-film">
+                                    <img src="./assets/img/300_1647316349892.jpg" class="poster" alt="">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="name-film">Come Play With Me</div>
+
+                            </td>
+                            <td>
+                                <div class="quantity">
+                                    <button class="down">
+                                        <i class="fas fa-angle-left"></i>
+                                    </button>
+                                    <div class="display"></div>
+                                    <button class="up">
+                                        <i class="fas fa-angle-right"></i>
+                                    </button>
+                                </div>
+
+                            </td>
+                            <td>
+                                <div class="seat-booked"></div>
+
+                            </td>
+                            <td>
+                                <div class="price"></div>
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
 
         </div>
         <div class="footer">
@@ -37,17 +149,20 @@
                         <a href="" class="link-genre">
                             <li class="title__list-items">
                                 <i class="fas fa-caret-right right-icon"></i>
-                                Horror</li>
+                                Horror
+                            </li>
                         </a>
                         <a href="" class="link-genre">
                             <li class="title__list-items">
                                 <i class="fas fa-caret-right right-icon"></i>
-                                Horror</li>
+                                Horror
+                            </li>
                         </a>
                         <a href="" class="link-genre">
                             <li class="title__list-items">
                                 <i class="fas fa-caret-right right-icon"></i>
-                                Horror</li>
+                                Horror
+                            </li>
                         </a>
                     </ul>
 
@@ -55,10 +170,11 @@
                 <div class="book col-lg-3 col-sm-12">
                     <ul class="title__list">
                         <div class="text-title">Book Tickets</div>
-                        <a href="" class="link-genre">
+                        <a href="#" class="link-genre">
                             <li class="title__list-items">
                                 <i class="fas fa-caret-right right-icon"></i>
-                                Buy Tickets</li>
+                                Buy Tickets
+                            </li>
                         </a>
                     </ul>
                 </div>
