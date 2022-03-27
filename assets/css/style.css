@@ -4,17 +4,29 @@
     --primary-color: #F26B38;
 }
 
+@media screen and (min-width: 700px) {
+    .header_left_input_group {
+        margin-left: 120px;
+    }
+}
+
+@media screen and (max-width: 395px) {
+    .header_left_input_group {
+        margin-left: 0px;
+    }
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     margin: auto;
-
 }
 
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
+    /* width: 100vw; */
     /* margin: auto; */
 }
 
@@ -41,12 +53,54 @@ body {
 .header_img {
     height: 80px;
     cursor: pointer;
+    animation: spiderMan 4s ease 0s 1 normal forwards;
 }
+
+@keyframes spiderMan {
+    0% {
+      opacity: 0;
+      transform: translateY(-300px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
 .header_left_input_group {
     position: relative;
     margin-left: 120px;
 }
+
+.header_left_input_group_result_list {
+    position: absolute;
+    top: 100%;
+    left : 0;
+    list-style: none;
+    width: 100%;
+    background-color: #fff;
+    padding: 0;
+    display: none;
+    z-index: 99;
+}
+
+.search_fade {
+    display: block;
+}
+
+.header_left_input_group_result_item {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    color: rgb(133, 128, 128);
+    border-bottom: 1px solid rgb(230, 224, 224);
+}
+
+.header_left_input_group_result_item:hover {
+    background-color: rgb(252, 248, 248);
+}
+
 
 .header_left_input_group_input {
     width: 250px;
@@ -66,7 +120,62 @@ body {
     color: #4e5052;
     opacity: 0.7;
     transition: opacity 0.2s ease;
+    animation: searchFadeTop 1.5s ease 0s 1 normal forwards, searchFadeDance 1s ease 1.5s 1 normal forwards;;
 }
+
+@keyframes searchFadeTop {
+    0% {
+      transform: translateY(-750px) translateX(-300px);
+    }
+    75% {
+      transform: translateY(0) translateX(-3px);
+    }
+    100% {
+        transform: translateY(-10px) translateX(0);
+    }
+  }
+
+@keyframes searchFadeDance {
+    0% {
+      animation-timing-function: ease-in;
+      transform: translateY(-10px);
+    }
+  
+    38% {
+      animation-timing-function: ease-out;
+      transform: translateY(0);
+    }
+  
+    55% {
+      animation-timing-function: ease-in;
+      transform: translateY(-8px);
+    }
+  
+    72% {
+      animation-timing-function: ease-out;
+      transform: translateY(0);
+    }
+  
+    81% {
+      animation-timing-function: ease-in;
+      transform: translateY(-5px);
+    }
+  
+    90% {
+      animation-timing-function: ease-out;
+      transform: translateY(0);
+    }
+  
+    95% {
+      animation-timing-function: ease-in;
+      transform: translateY(-2px);
+    }
+  
+    100% {
+      animation-timing-function: ease-out;
+      transform: translateY(0);
+    }
+  }
 
 .header_left_input_group_icon:hover {
     cursor: pointer;
@@ -138,6 +247,16 @@ body {
 
 .active.body_content_film_nav_option:after {
     width: 100%;
+    animation: optionFade 1s ease;
+}
+
+@keyframes optionFade {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
 }
 
 .body_content_film_nav_option:hover {
@@ -179,6 +298,21 @@ body {
     object-fit: cover;
 }
 
+.film {
+    animation: filmFade 1s ease 0s 1 normal forwards;
+}
+
+@keyframes filmFade {
+    0% {
+        transform: translateY(50px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
 .col_name {
     color: #4e5052;
     font-size: 1rem;
@@ -216,6 +350,42 @@ body {
     display: block;
 }
 
+.seeMoreScroll {
+    animation: seeMore 2s ease 0s 1 normal forwards;
+}
+
+@keyframes seeMore {
+    0%,
+    100% {
+      transform: rotate(0deg);
+      transform-origin: 0 50%;
+    }
+  
+    10% {
+      transform: rotate(2deg);
+    }
+  
+    20%,
+    40%,
+    60% {
+      transform: rotate(-4deg);
+    }
+  
+    30%,
+    50%,
+    70% {
+      transform: rotate(4deg);
+    }
+  
+    80% {
+      transform: rotate(-2deg);
+    }
+  
+    90% {
+      transform: rotate(2deg);
+    }
+  }
+
 .body_content_film_btn_seemore:hover {
     color: #fff;
     background-color: var(--primary-color);
@@ -250,7 +420,25 @@ body {
     font-size: 0.9rem;
     color:rgb(71, 69, 69);
     line-height: 1.5rem;
+    display: none;
 }
+
+.description_fade {
+    display: block;
+    animation: descriptionFade 2s ease 0s 1 normal forwards;
+}
+
+@keyframes descriptionFade {
+    0% {
+      opacity: 0;
+      transform: translateX(2550px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 
 .body_content_about_strong {
     font-weight: 800;
