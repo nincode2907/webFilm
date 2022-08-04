@@ -8,7 +8,7 @@ input.addEventListener("click", () => {
 })
 
 function filterResult(keyword) {
-    const arr = films.filter((film)=> {
+    const arr = films.filter((film) => {
         return film.name.includes(keyword.toUpperCase())
     })
     return arr;
@@ -16,14 +16,14 @@ function filterResult(keyword) {
 
 function renderResult(arr) {
     let html = ""
-    arr.forEach((ar,index) => {
-        html+=`<li class="header_left_input_group_result_item">${ar.name}</li>`
+    arr.forEach((ar, index) => {
+        html += `<li class="header_left_input_group_result_item">${ar.name}</li>`
     })
     resultList.innerHTML = html;
 }
 
-input.addEventListener("input",(e) => {
-        const arr = filterResult(e.target.value)
-        renderResult(arr)
-    }
+input.addEventListener("input", (e) => {
+    const arr = filterResult(e.target.value)
+    renderResult(arr)
+}
 )  

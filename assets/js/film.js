@@ -10,7 +10,7 @@ var cong = 1;
 navFilms[0].addEventListener('click', () => {
     navFilms[0].classList.add('active');
     navFilms[1].classList.remove('active');
-    contentFilm.innerHTML ="";
+    contentFilm.innerHTML = "";
     lastFilmIndex = 0;
     addThreeFilms(lastFilmIndex, 1)
     addThreeFilms(lastFilmIndex, 1)
@@ -20,7 +20,7 @@ navFilms[0].addEventListener('click', () => {
 navFilms[1].addEventListener('click', () => {
     navFilms[1].classList.add('active');
     navFilms[0].classList.remove('active');
-    contentFilm.innerHTML ="";
+    contentFilm.innerHTML = "";
     lastFilmIndex = 11;
     addThreeFilms(lastFilmIndex, -1)
     addThreeFilms(lastFilmIndex, -1)
@@ -31,7 +31,7 @@ navFilms[1].addEventListener('click', () => {
 function addThreeFilms(indexFilms, plus) {
 
     let html = "<div class='row align-items-start mt-1'>";
-    for(let i=0;i<3;i++) {
+    for (let i = 0; i < 3; i++) {
         html += `<div class="col film">
             <span class="col_main">
                 <img src="${films[indexFilms].img}" alt="film1" class="col_film">
@@ -46,13 +46,13 @@ function addThreeFilms(indexFilms, plus) {
     html += "</div>";
     let sourceHtml = contentFilm.innerHTML;
     sourceHtml += html;
-    contentFilm.innerHTML =sourceHtml;
+    contentFilm.innerHTML = sourceHtml;
     lastFilmIndex = indexFilms;
     const buys = document.querySelectorAll('.col_sub');
-    buys.forEach((buy,index) => {
-        buy.onclick = () =>   {
-            window.localStorage.setItem("user",JSON.stringify(index));
-            window.location = "./main.html"
+    buys.forEach((buy, index) => {
+        buy.onclick = () => {
+            window.localStorage.setItem("user", JSON.stringify(index));
+            window.location = "./book.html"
         }
     })
 }
@@ -60,14 +60,14 @@ function addThreeFilms(indexFilms, plus) {
 addThreeFilms(lastFilmIndex, 1)
 addThreeFilms(lastFilmIndex, 1)
 seeMore.addEventListener("click", () => {
-    if(cong === 1) {
-        if(lastFilmIndex <= films.length -3)
-            addThreeFilms(lastFilmIndex,cong);
+    if (cong === 1) {
+        if (lastFilmIndex <= films.length - 3)
+            addThreeFilms(lastFilmIndex, cong);
         else alert("Film is over!!")
     }
     else {
-        if(lastFilmIndex >= 2)
-            addThreeFilms(lastFilmIndex,cong);
+        if (lastFilmIndex >= 2)
+            addThreeFilms(lastFilmIndex, cong);
         else alert("Film is over!!")
     }
 })

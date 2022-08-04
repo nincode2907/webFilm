@@ -6,7 +6,7 @@ var swiper = new Swiper('.swiper', {
     slidesPerView: "auto",
     loop: true,
     coverflowEffect: {
-        rotate:0,
+        rotate: 0,
         stretch: 0,
         depth: 0,
         modifier: 1,
@@ -22,5 +22,5 @@ var swiper = new Swiper('.swiper', {
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
-        },
+    },
 })
