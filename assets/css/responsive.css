@@ -1,10 +1,30 @@
 /* @include media-breakpoint-up(xs) {
+  .header_left {
+    display: none;
+  } */
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 75em) {
 }
-@include media-breakpoint-up(sm) {
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 62em) {
+  .header_left_input_group,
+  .carousel-control-prev,
+  .carousel-control-next,
+  .carousel-indicators {
+    display: none;
+  }
 }
-@include media-breakpoint-up(md) {
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 48em) {
+  .body_content_film_nav_option {
+    font-size: 1rem;
+    margin-right: 15px;
+  }
 }
-@include media-breakpoint-up(lg) {
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 36em) {
 }
-@include media-breakpoint-up(xl) {
-} */
