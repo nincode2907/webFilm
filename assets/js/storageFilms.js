@@ -1,63 +1,99 @@
 const films = [
     {
         name: "NIGHTMARE ALLEY",
-        img: "./assets/img/film/now/1.jpg",
-        price: "150.000"
+        img: 1,
     },
     {
         name: "COME PLAY WITH ME",
-        img: "./assets/img/film/now/2.jpg",
-        price: "130.000"
+        img: 2,
     },
     {
         name: "MẾN GÁI MIỀN TÂY",
-        img: "./assets/img/film/now/3.jpg",
-        price: "50.000"
+        img: 3,
     },
     {
         name: "CRACKED",
-        img: "./assets/img/film/now/4.jpg",
-        price: "70.000"
+        img: 4,
     },
     {
         name: "THE BAD GUYS",
-        img: "./assets/img/film/now/5.jpg",
-        price: "80.000"
+        img: 5,
     },
     {
         name: "THE LOST CITY",
-        img: "./assets/img/film/now/6.jpg",
-        price: "40.000"
+        img: 6,
     },
     {
         name: "DOCTOR STRANGE IN THE MULTIVERSE OF MADNESS",
-        img: "./assets/img/film/now/7.jpg",
-        price: "90.000"
+        img: 7,
     },
     {
         name: "NGHỀ SIÊU DỄ",
-        img: "./assets/img/film/now/8.jpg",
-        price: "200.000"
+        img: 8,
     },
     {
         name: "JUJUTSU KAISEN 0: THE MOVIE",
-        img: "./assets/img/film/now/9.jpg",
-        price: "10.000"
+        img: 9,
     },
     {
         name: "FANTASTIC BEASTS: THE SECRETS OF DUMBLEDORE",
-        img: "./assets/img/film/now/10.jpg",
-        price: "1500.000"
+        img: 10,
     },
     {
         name: "QUA BỂN LÀM CHI",
-        img: "./assets/img/film/now/11.jpg",
-        price: "1550.000"
+        img: 11,
     },
     {
         name: "MORBIUS",
-        img: "./assets/img/film/now/12.jpg",
-        price: "170.000"
+        img: 12,
+    },
+    {
+        name: "Alienoid: Cuộc Chiến Xuyên Không",
+        img: 13,
+    },
+    {
+        name: "Điều Ước Cuối Cùng Của Tù Nhân 2037",
+        img: 14,
+    },
+    {
+        name: "Sát Thủ Đối Đầu",
+        img: 15,
+    },
+    {
+        name: "Nhập Hồn",
+        img: 16,
+    },
+    {
+        name: "Thor: Tình Yêu Và Sấm Sét",
+        img: 17,
+    },
+    {
+        name: "Dân Chơi Không Sợ Con Rơi",
+        img: 18,
+    },
+    {
+        name: "Duyên Ma",
+        img: 19,
+    },
+    {
+        name: "Không",
+        img: 20,
+    },
+    {
+        name: "Hạ Cánh Khẩn Cấp",
+        img: 21,
+    },
+    {
+        name: "Vô Diện Sát Nhân",
+        img: 22,
+    },
+    {
+        name: "Dragon Ball Super: SUPER HERO",
+        img: 23,
+    },
+    {
+        name: "Quái Thú",
+        img: 24,
     },
 ];
 
