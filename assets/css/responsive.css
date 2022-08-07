@@ -102,4 +102,8 @@
   .login_wrapper_content_ways_list_item {
     min-width: 275px;
   }
+
+  .header_left_input_group {
+    margin-left: 52px;
+  }
 }

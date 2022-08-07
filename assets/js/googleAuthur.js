@@ -33,12 +33,11 @@ var startApp = function () {
 function attachSignin(element) {
     auth2.attachClickHandler(element, {},
         function (googleUser) {
-            document.getElementById('name').innerText = "Signed in: " +
-                googleUser.getBasicProfile().getName();
+            document.getElementById('name').innerText = googleUser.getBasicProfile().getName();
         },
-        // function (error) {
-        //     alert(JSON.stringify(error, undefined, 2));
-        // }
+        function (error) {
+            alert(JSON.stringify(error, undefined, 2));
+        }
     );
 }
 
