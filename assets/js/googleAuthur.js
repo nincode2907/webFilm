@@ -36,7 +36,7 @@ function attachSignin(element) {
             document.getElementById('name').innerText = googleUser.getBasicProfile().getName();
         },
         function (error) {
-            alert(JSON.stringify(error, undefined, 2));
+            alert("Sorry, have a error!!");
         }
     );
 }
