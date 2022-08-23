@@ -1,7 +1,7 @@
 const films = [
     {
         name: "NIGHTMARE ALLEY",
-        img: 1,
+        img: "1.jpg",
     },
     {
         name: "COME PLAY WITH ME",
