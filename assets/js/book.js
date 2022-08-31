@@ -1,12 +1,14 @@
 import films from "./storageFilms.js"
 
 const user = window.localStorage.getItem('user');
-const listFilms = document.querySelectorAll(".list-film")
-const filmBooked = document.querySelector(".film-booked")
-const poster = document.querySelector(".poster")
-const nameFilm = document.querySelector(".name-film")
+const listFilms = document.querySelector(".list-film")
+const nameFilm = document.querySelector(".film-name")
+const contentFilm =document.querySelector(".film-content")
 
-listFilms.forEach(film => film.src = films[user].img)
-filmBooked.src = films[user].img
-poster.src = films[user].img
-nameFilm.innerHTML = films[user].name
+window.addEventListener("load", function(){
+    listFilms.setAttribute("src", `./assets/img/films/${films[JSON.parse(user) ].img}.jpg`)
+    nameFilm.innerText = films[JSON.parse(user) ].name
+    contentFilm.innerText = films[JSON.parse(user)].content
+})
+
+console.log(JSON.parse(user));
