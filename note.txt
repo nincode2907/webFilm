@@ -1,7 +1,7 @@
 1. chỉnh sửa theo bố cục như sau:
 - nội dung chính gồm 3 phần: 
     + Phim: poster phim và nội dung phim => OK
-    + Đặt vé: Ngày, thời gian, giá hôm nay, rạp, chọn ghế.
+    + Đặt vé: Ngày => Ok, thời gian, giá hôm nay, rạp, chọn ghế.
     + Thanh toán: show ra tổng tiền và chọn phương thức thanh toán.
 2. logo
 3. thêm vào database
