@@ -88,13 +88,70 @@ const films = [
         img: 22,
     },
     {
-        name: "Dragon Ball Super: SUPER HERO",
+        name: "Vô Diện Sát Nhân",
         img: 23,
     },
     {
         name: "Quái Thú",
         img: 24,
     },
+    {
+        name: "Cú Rơi Tử Thần",
+        img: 25,
+    },
+    {
+        name: "Nhà Kho Chết Chóc",
+        img: 26,
+    },
+    {
+        name: "Dragon Ball Super: SUPER HERO",
+        img: 27,
+    },
+    {
+        name: "Lời Mời Đến Địa Ngục",
+        img: 28,
+    },
+    {
+        name: "Paw Of Fury: The Legend Of Hank",
+        img: 29,
+    },
+    {
+        name: "Where The Crawdads Sing",
+        img: 30,
+    },
+    {
+        name: "Ticket To Paradise",
+        img: 31,
+    },
+    {
+        name: "Kisaragi: Nhà Ga Nuốt Chửng",
+        img: 32,
+    },
+    {
+        name: "Love Destiny The Movie",
+        img: 33,
+    },
+    {
+        name: "Hồn Ma Không Đầu",
+        img: 34,
+    },
+    {
+        name: "Where The Crawdads Sing",
+        img: 35,
+    },
+    {
+        name: "Spider-Man: No Way Home",
+        img: 36,
+    },
+    {
+        name: "Hansan: Rising Dragon",
+        img: 37,
+    },
+    {
+        name: "Cù Lao Xác Sống",
+        img: 38,
+    },
+
 ];
 
 export default films

@@ -21,6 +21,7 @@ menuBtn.onclick = () => {
 }
 
 login.onclick = () => {
+    console.log(1);
     loginForm.classList.remove("hidden_form")
 }
 

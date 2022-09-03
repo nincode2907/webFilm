@@ -23,38 +23,95 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
     <link rel="stylesheet" href="./assets/css/book.css" />
   </head>
   <body>
     <div class="main">
       <div class="container header">
         <div class="header_left">
-          <a href="./index.html" class="header_left_link">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7fu4nYpvxspPEBd79V3sAvTP0LC70Jg1_rA&usqp=CAU"
-              alt="logo"
-              class="header_img"
-            />
+          <a href="." class="header_left_link">
+            <img src="./assets/img/logo.jpg" alt="logo" class="header_img" />
           </a>
-          <div class="header_left_input_group">
-            <input
-              type="text"
-              class="form-control header_left_input_group_input"
-              id="exampleFormControlInput1"
-              placeholder="Tìm tên phim ..."
-              value=""
-            />
-            <i
-              class="fa-solid fa-magnifying-glass header_left_input_group_icon"
-            ></i>
-            <ul class="header_left_input_group_result_list"></ul>
+          <div class="header_left_input_wrapper">
+            <div class="header_left_input_group">
+              <input
+                type="text"
+                class="form-control header_left_input_group_input"
+                id="exampleFormControlInput1"
+                placeholder="Tìm tên phim ..."
+              />
+              <i
+                class="fa-solid fa-magnifying-glass header_left_input_group_icon"
+              ></i>
+              <ul class="header_left_input_group_result_list"></ul>
+            </div>
           </div>
         </div>
         <div class="header_right">
-          <span href="" class="header_right_login">
+          <span class="header_right_login">
             <i class="fa-solid fa-user header_right_login_icon"></i>
-            <span class="header_right_login_text">Đăng nhập</span>
+            <span class="header_right_login_text" id="name">Đăng nhập</span>
           </span>
+          <span class="header_right_menu_tablet">
+            <i class="fa-solid fa-bars header_right_menu_tablet_icon"></i>
+          </span>
+        </div>
+      </div>
+      <div class="login position-absolute hidden_form">
+        <div class="login_wrapper container">
+          <button
+            type="button"
+            class="close position-absolute login_wrapper_close"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="login_wrapper_header">
+            <img
+              src="./assets/img/logo.jpg"
+              alt="logo"
+              class="login_wrapper_header_logo"
+            />
+            <h2 class="login_wrapper_header_heading">
+              Đăng nhập vào Spider Cinema
+            </h2>
+          </div>
+          <div class="login_wrapper_content">
+            <div class="login_wrapper_content_ways">
+              <ul class="login_wrapper_content_ways_list">
+                <li class="login_wrapper_content_ways_list_item">
+                  <img
+                    src="https://accounts.fullstack.edu.vn/assets/images/signin/personal-18px.svg"
+                    alt="google"
+                    class="login_wrapper_content_ways_list_item_img"
+                  />
+                  <span class="login_wrapper_content_ways_list_item_description"
+                    >Sử dụng email / số điện thoại</span
+                  >
+                </li>
+                <li class="login_wrapper_content_ways_list_item google_way">
+                  <img
+                    src="https://accounts.fullstack.edu.vn/assets/images/signin/google-18px.svg"
+                    alt="google"
+                    class="login_wrapper_content_ways_list_item_img"
+                  />
+                  <span class="login_wrapper_content_ways_list_item_description"
+                    >Tiếp tục với Google</span
+                  >
+                </li>
+              </ul>
+            </div>
+            <p class="login_wrapper_content_signUp">
+              Bạn chưa có tài khoản?
+              <a href="#" class="login_wrapper_content_signUp_link">Đăng ký</a>
+            </p>
+          </div>
+          <div class="login_wrapper_footer">
+            Việc bạn tiếp tục sử dụng trang web này đồng nghĩa bạn đồng ý với
+            <a href="#">Điều khoản sử dụng</a>
+            của chúng tôi.
+          </div>
         </div>
       </div>
       <div class="body">
@@ -242,6 +299,7 @@
     <script type="module" src="./assets/js/book.js"></script>
     <script src="./assets/css/book.js"></script>
     <script type="module" src="./assets/js/search.js"></script>
+    <script src="./assets/js/main.js"></script>
     <!-- <script src="https://kit.fontawesome.com/fb8f607d12.js" crossorigin="anonymous"></script> -->
   </body>
 </html>

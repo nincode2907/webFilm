@@ -1,0 +1,2 @@
+fb: https://accounts.fullstack.edu.vn/assets/images/signin/facebook-18px.svg
+git: https://accounts.fullstack.edu.vn/assets/images/signin/github-18px.svg
