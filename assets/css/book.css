@@ -10,39 +10,15 @@ hmtl {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Smartphone */
-/* @media screen and  (max-width: 1024px){
-    .body, .footer {
-        max-width: 100vw;
-    }
-@media screen and (min-width: 375px) and ( max-width: 1024px){
-    .body {
-        width: 100vw;
-        margin: 0;
-    }
-    .buy-btn {
-        width: 100%;
-        height: 40px;
-        background-color: #FF0033;
-        color: #fff;
-        border-radius: 10px;
-        border: none;
-    }
-}
-
-@media screen and (min-width: 1025px) {
-    .body{
-        max-width: 80vw;
-        margin: 0 auto;
-        background-color: #fff;
-   
-   }
-} */
-
 /* BODY */
 
 .body {
     padding: 0 140px;
+}
+
+
+.contain-film {
+    
 }
 
 .text__title-body {
@@ -64,119 +40,52 @@ hmtl {
     background-color: red;
 }
 
-label.seat-empty {
-    padding: 8px 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-
-}
-
-input[type=checkbox] {
-    display: none;
-}
-
-.check {
-    color: #fff;
-    background-color: #FF0033;
-}
-
-.screen {
-    margin-top: 40px;
-    width: 100%;
-    height: 100px;
-    background-color: #ddd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.buy-btn {
-    
-    width: 100px;
-    height: 40px;
-    background-color: #FF0033;
-    color: #fff;
-    border-radius: 10px;
-    border: none;
-}
-
-.block-time {
-    display: inline-block;
-    margin: 10px;
-    text-align: center;
-    border: 1px solid #ccc;
-    width: 150px;
-    border-radius: 10px;
-    
-}
-
-.contain-film {
-    display: flex;
-    flex-wrap: wrap;
-    /* width: 100%; */
-    /* overflow-x: hidden; */
-}
-
 .poster {
     width: 100px;
     height: 100px;
 }
 
 img.list-film { 
-    width: 150px;
-    height: 150px;
+   width: 100%;
+   height: 100%;
 }
 
 .movie-items {
-    margin-top: 10px;
-    margin-left: 10px;
-}
 
-.contain-bill {
-    height: 150px;
-    width: 100%;
-    background: url("https://atalian.vn/wp-content/uploads/sites/22/2019/07/4_Keeping-Up-with-the-Cinema-Cleanliness.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 1px solid red;
-    display: flex;
-    align-items: center;
-}
-
-table {
-    width: 100%;
-}
-
-table tr, tr td{
-    border: 1px solid #fff;
-}
-
-td {
-    margin-left: 10px;
-    text-align: center;
-}
-
-.quantity {
-    display: flex;
-    justify-content: center;
-}
-
-.display {
-    width: 28px;
-    height: 28px;
-    background: #fff;
-    color: #000;
 }
 
 .title {
-    text-align: center;
-    font-size: 30px;
-    font-weight: 500;
+    opacity: 0.5;
+    font-size: 1.125rem;
+    border-bottom: 1px solid #a5a2a2cc;
+    
 }
+
+.film-name {
+    margin: 15px 0;
+    color: red;
+}
+
+.film-content {
+    opacity: 0.75;
+
+}
+
+.book-date.row {
+    gap: 10px;
+}
+
+.display {
+    text-align: center;
+    border: 1px solid #cccc;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px  rgba(0, 0, 0, 0.15);
+}
+
+.display__day {
+    font-size: .75rem;
+}
+
 /* Footer */
 
 .footer {

@@ -34,10 +34,10 @@ function addThreeFilms(arrayFilms) {
     let ranNum;
     for (let i = 0; i < 3; i++) {
         do {
-            ranNum = Math.floor(Math.random() * films.length);
+            ranNum = Math.floor(Math.random() * films.length );
         } while (arrayFilms.includes(ranNum));
         arrayFilms.push(ranNum)
-        html += `<div class="col-md-4 film col-12 col-sm-12">
+        html += `<div class="col-md-4 film col-12 col-sm-12" id="${ranNum}">
             <span class="col_main">
                 <img src="./assets/img/films/${films[ranNum].img}.jpg" alt="${films[ranNum].name}" class="col_film">
                 <div class="col_sub">
@@ -54,7 +54,8 @@ function addThreeFilms(arrayFilms) {
     const buys = document.querySelectorAll('.col_sub');
     buys.forEach((buy, index) => {
         buy.onclick = () => {
-            window.localStorage.setItem("user", JSON.stringify(index));
+            let getId = buy.parentElement.parentElement.getAttribute("id")
+            window.localStorage.setItem("user", JSON.stringify(getId) );
             window.location = "./book.html"
         }
     })
