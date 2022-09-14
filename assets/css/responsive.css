@@ -12,7 +12,7 @@
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (max-width: 48em) {
+@media screen and (max-width: 48em) {
   .body_content_film_nav_option {
     font-size: 1rem;
     margin-right: 15px;
@@ -98,7 +98,7 @@
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (max-width: 36em) {
+@media screen and (max-width: 36em) {
   .login_wrapper_content_ways_list_item {
     min-width: 275px;
   }

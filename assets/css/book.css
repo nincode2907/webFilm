@@ -13,7 +13,8 @@ hmtl {
 /* BODY */
 
 .body {
-    padding: 0 140px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 
@@ -77,13 +78,72 @@ img.list-film {
 
 .display {
     text-align: center;
+    padding: 8px 0; 
     border: 1px solid #cccc;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px  rgba(0, 0, 0, 0.15);
+    box-shadow: 2px 2px 5px  rgba(0, 0, 0, 0.15);
+}
+
+.display:hover {
+    color: #fff;
+    background-color: #000;
 }
 
 .display__day {
     font-size: .75rem;
+}
+
+.book-time {
+    margin: 10px 0;
+    gap: 10px;
+}
+
+.display__time {
+    text-align: center;
+    border: 1px solid #cccc;
+    border-radius: 10px;
+    padding: 8px 0;
+    cursor: pointer;
+}
+
+.display__time:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+.display__time.fade {
+    opacity: .5;
+    cursor: not-allowed;
+    user-select: none;
+
+}
+
+.price-today {
+
+}
+
+.price-today .no-sales {
+    opacity: .75;
+}
+
+.price-today .sales {
+    color: red;
+}
+
+.choose-seat {
+
+}
+
+.seat {
+
+}
+
+button.form-seat {
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: #ffff;
+    background-color: #303030;
+    border: none;
 }
 
 /* Footer */
