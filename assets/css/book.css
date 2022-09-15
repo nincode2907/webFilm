@@ -115,7 +115,6 @@ img.list-film {
     opacity: .5;
     cursor: not-allowed;
     user-select: none;
-
 }
 
 .price-today {
@@ -130,12 +129,35 @@ img.list-film {
     color: red;
 }
 
+.room-close {
+    color: #ffff;
+    text-align: right;
+    margin: 10px 20px;
+}
+
+.close-choosing {
+    font-size: 1.5rem;
+    padding: 10px;
+    cursor: pointer;
+}
+
 .choose-seat {
 
 }
 
-.seat {
+.seat-cinema {
 
+}
+
+span.class {
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 5px 0;
+    text-shadow: 0 0 3px #fff;
 }
 
 button.form-seat {
@@ -144,6 +166,79 @@ button.form-seat {
     color: #ffff;
     background-color: #303030;
     border: none;
+}
+
+.theater {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.screen {
+    position: relative;
+    background-color: grey;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    padding: 10px 0 ;
+    margin-bottom: 80px;
+}
+
+.screen::before {
+    content: "Lối ra";
+    position: absolute;
+    left: 0;
+    bottom: -110%;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px;
+    border: 2px solid #0bc90b;
+    border-inline: none;
+    box-shadow: 0 0 5px #fff;
+}
+
+.screen::after {
+    content: "Lối vào";
+    position:absolute;
+    bottom: -110%;
+    right:0;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px;
+    border: 2px solid #0bc90b;
+    border-inline: none;
+    box-shadow: 0 0 5px #fff;
+}
+
+.seat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b60327;
+    color: #fff;
+    font-weight: 700;
+    width: 25px;
+    height: 30px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-inline: 5px solid #81031c83;
+    margin-right: 5px;
+}
+
+.seat__left-item.row,.seat__middle-item.row, .seat__right-item.row{
+    justify-content: center;
+}
+
+.room {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+    background-color: #000;
 }
 
 /* Footer */

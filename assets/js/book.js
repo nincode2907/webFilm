@@ -8,13 +8,21 @@ const dateFilm = document.querySelector(".book-date")
 const timeFilm = document.querySelector(".book-time")
 // Render
 window.addEventListener("load", function () {
+    const rand = Math.floor(Math.random() * 5 + 2)
+    const displayTimes = document.getElementsByClassName("display__time ")
+
     listFilms.setAttribute("src", `./assets/img/films/${films[JSON.parse(user)].img}.jpg`)
     nameFilm.innerText = films[JSON.parse(user)].name
     contentFilm.innerText = films[JSON.parse(user)].content
-    const rand = Math.floor(Math.random() * 5 + 2)
     renderDate(rand)
     renderTime()
     applyPrice()
+    renderSeat()
+    for (const displayTime of displayTimes) {
+        displayTime.addEventListener('click', function () {
+            console.log(displayTime);
+        })
+    }
 })
 
 // Date
@@ -75,6 +83,12 @@ function renderTime() {
     })
 }
 
+
+
+// document.addEventListener('click', function(e){
+//     console.log([e.target]);
+// })
+
 function isMissing(timeFilm) {
     const d = new Date()
     const currentHour = d.getHours()
@@ -86,25 +100,63 @@ function isMissing(timeFilm) {
         return true
     } else if (hourFilm == currentHour) {
         return minFilm < currentMin ? true : false
-    }else {
+    } else {
         return false
     }
 }
-
 // Price 
 
-const price = ["90000","120000"]
+const price = ["90000", "120000"]
 const priceSale = document.querySelector(".sales")
 const priceRegular = document.querySelector(".no-sales")
-const currencyFormat = new Intl.NumberFormat("vi-VN", {style: 'currency', currency: "VND"})
-function applyPrice(){
+const currencyFormat = new Intl.NumberFormat("vi-VN", { style: 'currency', currency: "VND" })
+function applyPrice() {
     const d = new Date()
     const day = d.getDate()
-    if(day === 0 || day === 6){
+    if (day === 0 || day === 6) {
         priceRegular.innerText += " " + currencyFormat.format(parseInt(price[1]))
         priceSale.innerText += " " + currencyFormat.format(parseInt(price[1]) / 2)
-    }else {
+    } else {
         priceRegular.innerText += " " + currencyFormat.format(parseInt(price[0]))
         priceSale.innerText += " " + currencyFormat.format(parseInt(price[0]) / 2)
     }
+}
+
+// Seat
+
+const arrRow = ["A", "B", "C", "D", "E", "F", "G", "H"]
+const theater = document.querySelector(".theater")
+function renderSeat() {
+    arrRow.forEach((item, index) => {
+        theater.innerHTML += `<div class="seat-cinema row">
+        <span class="class col-lg-1">${item}</span>
+        <div class="seat__left col-lg-2">
+          <div class="seat__left-item row"></div>
+        </div>
+        <div class="seat__middle col-lg-6">
+            <div class="seat__middle-item row"></div>
+        </div>
+        <div class="seat__right col-lg-2">
+            <div class="seat__right-item row"></div>
+        </div>
+      </div>`
+    })
+    listSeat(arrRow)
+}
+
+function listSeat(arr) {
+    const seatLeft = document.querySelectorAll(".seat__left-item")
+    const seatMiddle = document.querySelectorAll(".seat__middle-item")
+    const seatRight = document.querySelectorAll(".seat__right-item")
+    arr.forEach((item, index) => {
+        for (let i = 0; i < 12; ++i) {
+            if (i < 2) {
+                seatLeft[index].innerHTML += `<div class="seat col-lg-1">${i + 1}</div>`
+            } else if (i >= 2 && i < 10) {
+                seatMiddle[index].innerHTML += `<div class="seat col-lg-1">${i + 1}</div>`
+            } else {
+                seatRight[index].innerHTML += `<div class="seat col-lg-1">${i + 1}</div>`
+            }
+        }
+    })
 }
