@@ -84,10 +84,6 @@ img.list-film {
     box-shadow: 2px 2px 5px  rgba(0, 0, 0, 0.15);
 }
 
-.display:hover {
-    color: #fff;
-    background-color: #000;
-}
 
 .display__day {
     font-size: .75rem;
@@ -106,7 +102,8 @@ img.list-film {
     cursor: pointer;
 }
 
-.display__time:hover {
+.display.check,
+.display__time.check  {
     color: #fff;
     background-color: #000;
 }
@@ -137,8 +134,14 @@ img.list-film {
 
 .close-choosing {
     font-size: 1.5rem;
-    padding: 10px;
+    padding: 10px 15px;
     cursor: pointer;
+}
+
+.close-choosing:hover {
+    color: #000;
+    background-color: grey;
+    border-radius: 50%;
 }
 
 .choose-seat {
@@ -157,7 +160,7 @@ span.class {
     font-size: 1.125rem;
     font-weight: 600;
     margin: 5px 0;
-    text-shadow: 0 0 3px #fff;
+    text-shadow: 0 0 5px #fff, 0 0 5px #33eb61;
 }
 
 button.form-seat {
@@ -169,6 +172,7 @@ button.form-seat {
 }
 
 .theater {
+    position: relative;
     width: 80%;
     margin: 0 auto;
 }
@@ -227,6 +231,14 @@ button.form-seat {
     margin-right: 5px;
 }
 
+.seat.check {
+    background-color: #0bc90b;
+}
+
+.seat.chose {
+    background-color: orange;
+}
+
 .seat__left-item.row,.seat__middle-item.row, .seat__right-item.row{
     justify-content: center;
 }
@@ -239,6 +251,56 @@ button.form-seat {
     bottom: 0;
     z-index: 99999;
     background-color: #000;
+    display: none;
+}
+
+.glossary {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    margin: 20px 0;
+}
+
+.chose{
+    position: relative;
+}
+
+.chose::before{
+    content: "";
+    position: absolute;
+    left: -50%;
+    width: 40px;
+    height: 20px;
+    background-color: orange;
+}
+
+.choosing {
+    position: relative;
+}
+
+.choosing::before{
+    content: "";
+    position: absolute;
+    left: -50%;
+    width: 40px;
+    height: 20px;
+    background-color: #0bc90b;
+}
+
+.done {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 80px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+    border: 2px solid #0bc90b;
+    box-shadow: 0 0 5px #fff, 0 0 5px #0bc90b;
+
 }
 
 /* Footer */
@@ -319,3 +381,8 @@ ul > a.link-genre:hover {
     color: 	#FF0033;
 }
 
+/* Handle */
+
+.room.open {
+    display: block;
+}

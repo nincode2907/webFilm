@@ -18,12 +18,15 @@ window.addEventListener("load", function () {
     renderTime()
     applyPrice()
     renderSeat()
+
     for (const displayTime of displayTimes) {
         displayTime.addEventListener('click', function () {
             console.log(displayTime);
         })
     }
 })
+
+
 
 // Date
 
@@ -124,7 +127,7 @@ function applyPrice() {
 
 // Seat
 
-const arrRow = ["A", "B", "C", "D", "E", "F", "G", "H"]
+const arrRow = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
 const theater = document.querySelector(".theater")
 function renderSeat() {
     arrRow.forEach((item, index) => {
@@ -149,14 +152,48 @@ function listSeat(arr) {
     const seatMiddle = document.querySelectorAll(".seat__middle-item")
     const seatRight = document.querySelectorAll(".seat__right-item")
     arr.forEach((item, index) => {
-        for (let i = 0; i < 12; ++i) {
-            if (i < 2) {
-                seatLeft[index].innerHTML += `<div class="seat col-lg-1">${i + 1}</div>`
-            } else if (i >= 2 && i < 10) {
+        if (item != arr[arr.length - 1]) {
+            for (let i = 0; i < 18; ++i) {
+                if (i < 4) {
+                    seatLeft[index].innerHTML += `<div class="seat col-lg-1">${i + 1}</div>`
+                } else if (i >= 4 && i < 14) {
+                    seatMiddle[index].innerHTML += `<div class="seat col-lg-1">${i + 1}</div>`
+                } else {
+                    seatRight[index].innerHTML += `<div class="seat col-lg-1">${i + 1}</div>`
+                }
+            }
+        }
+        else {
+            for (let i = 0; i < 10; ++i) {
                 seatMiddle[index].innerHTML += `<div class="seat col-lg-1">${i + 1}</div>`
-            } else {
-                seatRight[index].innerHTML += `<div class="seat col-lg-1">${i + 1}</div>`
             }
         }
     })
+    const seat = document.querySelectorAll(".seat")
+    // handleChoose(seat)
+    for (const element of seat) {
+        element.addEventListener('click', function () {
+            // console.log(element)
+            element.classList.add("check")
+        })
+    }
+}
+
+// Handle
+const closeRoom = document.querySelector(".close-choosing")
+const room = document.querySelector(".room")
+const openRoom = document.querySelector(".form-seat")
+const chooseTime = document.querySelectorAll(".display")
+const chooseDate = document.querySelectorAll(".display__time")
+
+closeRoom.addEventListener('click', function () {
+    room.classList.remove("open")
+})
+
+openRoom.addEventListener('click', function () {
+    room.classList.add("open")
+})
+
+function handleChoose(arrElement) {
+    
 }
