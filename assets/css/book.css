@@ -62,6 +62,10 @@ img.list-film {
     
 }
 
+.book-date, .book-time, .price-today, .choose-seat {
+    padding-bottom: 10px;
+}
+
 .film-name {
     margin: 15px 0;
     color: red;
@@ -100,12 +104,6 @@ img.list-film {
     border-radius: 10px;
     padding: 8px 0;
     cursor: pointer;
-}
-
-.display.check,
-.display__time.check  {
-    color: #fff;
-    background-color: #000;
 }
 
 .display__time.fade {
@@ -231,14 +229,6 @@ button.form-seat {
     margin-right: 5px;
 }
 
-.seat.check {
-    background-color: #0bc90b;
-}
-
-.seat.chose {
-    background-color: orange;
-}
-
 .seat__left-item.row,.seat__middle-item.row, .seat__right-item.row{
     justify-content: center;
 }
@@ -300,7 +290,94 @@ button.form-seat {
     color:#fff;
     border: 2px solid #0bc90b;
     box-shadow: 0 0 5px #fff, 0 0 5px #0bc90b;
+    cursor: pointer;
+}
 
+.payment {
+    margin-bottom: 30px;
+}
+
+.id-card.row {
+    gap: 10px;
+}
+
+.id-card__front, .id-card__behind {
+    height: 150px; 
+    background-color: gray;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    
+}
+
+.payment-tickets > div, .payment-tickets > img{
+    padding-bottom: 10px;
+}
+
+.payment-film___name {
+
+}
+
+.payment-time {
+
+}
+
+.payment-seat {
+
+}
+
+.payment-img {
+
+}
+
+.payment-sale > input {
+    margin-right: 10px;
+}
+
+img.bank {
+    width: 100px;
+    height: 50px;
+    object-fit: scale-down;
+    padding: 10px;
+    border-radius: 5px;
+}
+.payment-info__form input[type="radio"]{
+    display: none;
+}
+
+.payment-info__bank > label{
+    margin-top: 5px;
+    /* margin-bottom: 10px; */
+}
+
+label:hover > img.bank {
+    border: 2px solid #000;
+}
+
+.payment-info__customer > label, .payment-info__email > label, .payment-info__phone > label {
+    width: 150px;
+    margin-bottom: 10px;
+}
+input {
+    border: 1px solid #AEBDCA;
+}
+
+input[type='text'] {
+    padding: 5px 10px;
+}
+
+input:focus {
+    outline: 1px solid red;
+}
+
+button.payment-done {
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    border:none;
+    padding: 10px;
 }
 
 /* Footer */
@@ -342,8 +419,6 @@ ul.title__list {
 
 li.title__list-items {
     list-style: none;
-    
-
 }
 
 ul > a.link-genre {
@@ -386,3 +461,18 @@ ul > a.link-genre:hover {
 .room.open {
     display: block;
 }
+
+.display.check,
+.display__time.check,
+img.bank.check {
+    border: 2px solid red;
+}
+
+.seat.check {
+    background-color: #0bc90b;
+}
+
+.seat.chosen {
+    background-color: orange;
+}
+
