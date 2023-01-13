@@ -7,13 +7,13 @@ const loginForm = document.querySelector(".login")
 const closeLoginFormBtn = document.querySelector(".login_wrapper_close")
 
 
-window.addEventListener("scroll", () => {
-    let value = window.scrollY;
-    if (value >= 880) {
-        seeMoreBtn.classList.add("seeMoreScroll");
-        descriptionFade.classList.add("description_fade");
-    }
-})
+// window.addEventListener("scroll", () => {
+//     let value = window.scrollY;
+//     if (value >= 880) {
+//         seeMoreBtn.classList.add("seeMoreScroll");
+//         descriptionFade.classList.add("description_fade");
+//     }
+// })
 
 menuBtn.onclick = () => {
     menuBtn.classList.toggle("fade_menu")

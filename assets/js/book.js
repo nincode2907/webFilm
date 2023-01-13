@@ -1,5 +1,5 @@
 import films from "./storageFilms.js"
-import {handleChooseDate, handleChooseTime, listSeat, vnDate, nextDate, isMissing} from "./handleBook.js"
+import { handleChooseDate, handleChooseTime, listSeat, vnDate, nextDate, isMissing } from "./handleBook.js"
 
 const user = window.localStorage.getItem('user');
 const listFilms = document.querySelector(".list-film")
@@ -89,4 +89,29 @@ function applyPrice() {
     }
 }
 
-export {user}
+const apply = document.querySelector("#apply")
+const unapply = document.querySelector("#no-apply")
+const idCard = document.querySelector('.id-card')
+apply.addEventListener('click', function () {
+    idCard.setAttribute('style', 'display:flex')
+})
+
+unapply.addEventListener('click', function () {
+    idCard.removeAttribute('style')
+    idCard.removeEventListener('change', upload, true)
+})
+
+// Handle Upload image
+const frontImage = document.querySelector("#front-img")
+const behindImage = document.querySelector("#behind-img")
+
+function upload(e) {
+    const image = document.createElement('img')
+    image.src = URL.createObjectURL(e.target.files[0])
+    this.parentElement.appendChild(image);
+}
+
+frontImage.addEventListener('change', upload)
+behindImage.addEventListener('change', upload)
+
+export { user }

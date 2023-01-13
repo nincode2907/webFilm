@@ -152,7 +152,7 @@
     <div class="payment row">
 
       <div class="payment-tickets col-lg-6">
-        
+
       </div>
 
       <div class="payment-info col-lg-6">
@@ -168,6 +168,26 @@
           <div class="payment-info__phone">
             <label for="phone">Số điện thoại:</label>
             <input type="text" name="" id="phone">
+          </div>
+          <div class="payment-sale">
+            <label for="apply">Áp dụng thẻ sinh viên </label>
+            <input type="radio" name="apply" id="apply">
+            <label for="no-apply">Không áp dụng </label>
+            <input type="radio" name="apply" id="no-apply">
+            <div class="id-card row ">
+              <div class="id-card__front col-lg-5 g-0">
+                <label for="front-img">
+                  Mặt trước
+                </label>
+                <input type="file" name="front" id="front-img" accept=".jpeg, .png, .jpg, .svg">
+              </div>
+              <div class="id-card__behind col-lg-5 g-0">
+                <label for="behind-img">
+                  Mặt sau
+                </label>
+                <input type="file" name="behind" id="behind-img" accept=".jpeg, .png, .jpg, .svg">
+              </div>
+            </div>
           </div>
           <div class="payment-info__bank">
             <input type="radio" name="bank" id="tpbank">

@@ -8,6 +8,9 @@ var isNow = true;
 const filmsNow = []
 const filmsInFuture = []
 
+// fetch("https://www.galaxycine.vn/api/movie/showAndComming?")
+//     .then(function (response) { return response.json() })
+//     .then(movie => console.log(movie.movieShowing))
 //toogle option
 navFilms[0].addEventListener('click', () => {
     navFilms[0].classList.add('active');
@@ -34,7 +37,7 @@ function addThreeFilms(arrayFilms) {
     let ranNum;
     for (let i = 0; i < 3; i++) {
         do {
-            ranNum = Math.floor(Math.random() * films.length );
+            ranNum = Math.floor(Math.random() * films.length);
         } while (arrayFilms.includes(ranNum));
         arrayFilms.push(ranNum)
         html += `<div class="col-md-4 film col-12 col-sm-12" id="${ranNum}">
@@ -55,7 +58,7 @@ function addThreeFilms(arrayFilms) {
     buys.forEach((buy, index) => {
         buy.onclick = () => {
             let getId = buy.parentElement.parentElement.getAttribute("id")
-            window.localStorage.setItem("user", JSON.stringify(getId) );
+            window.localStorage.setItem("user", JSON.stringify(getId));
             window.location = "./book.html"
         }
     })

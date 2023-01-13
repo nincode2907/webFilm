@@ -1,5 +1,5 @@
 import films from "./storageFilms.js"
-import {user} from "./book.js"
+import { user } from "./book.js"
 // Use common
 
 function handleChooseCommon(arr) {
@@ -10,11 +10,11 @@ function handleChooseCommon(arr) {
     }
 }
 
-function handleChooseOnly(arr){
+function handleChooseOnly(arr) {
     for (const element of arr) {
         element.addEventListener('click', () => {
             arr.forEach(item => {
-                if(item.classList.contains('check')){
+                if (item.classList.contains('check')) {
                     item.classList.remove('check')
                 }
             })
@@ -25,15 +25,16 @@ function handleChooseOnly(arr){
 
 // Date
 
-function handleChooseDate(arr){
+function handleChooseDate(arr) {
     for (const element of arr) {
         element.addEventListener('click', () => {
             arr.forEach(item => {
-                if(item.classList.contains('check')){
+                if (item.classList.contains('check')) {
                     item.classList.remove('check')
                 }
             })
             element.classList.add('check')
+            console.log(element.value);
         })
     }
 }
@@ -170,21 +171,12 @@ function handleChooseSeat(arrElement) {
         })
     }
     closeRoom.addEventListener('click', function () {
-        showSeat.innerText = "Ghế bạn chọn: "
-        arrSeat.forEach(item => {
-            showSeat.innerText += " " + item
-        })
+        showSeat.innerText += " " + arrSeat.join(" ")
 
-        if(arrSeat.length > 0){
-            renderForm()
+        if (arrSeat.length > 0) {
+            renderForm(arrSeat.join(" "), arrSeat.length)
         }
     })
-}
-
-// Payment
-
-function handlePaymentForm (){
-    
 }
 
 // Payment
@@ -194,45 +186,23 @@ handleChooseOnly(bank)
 
 const payment = document.querySelector('.payment-tickets')
 
-function renderForm(seat, time){
+function renderForm(seat, quantity) {
+    const d = new Date()
+    const day = d.getDay()
+    const currencyFormat = new Intl.NumberFormat("vi-VN", { style: 'currency', currency: "VND" })
+    let totalMoney = 0
+    if (day == 0 || day == 6) {
+        totalMoney += quantity * 120000
+    }
+    else {
+        totalMoney += quantity * 90000
+    }
     payment.innerHTML = `<div class="payment-film__name">Tên phim: ${films[JSON.parse(user)].name}</div>
     <img src="./assets/img/films/${films[JSON.parse(user)].img}.jpg" class="payment-img" alt="" />
-    <div class="payment-time">Thời gian: </div>
-    <div class="payment-seat">Vé ghế: </div>
-    <div class="payment-sale">
-      <label for="apply">Áp dụng thẻ sinh viên </label>
-      <input type="radio" name="apply" id="apply">
-      <label for="no-apply">Không áp dụng </label>
-      <input type="radio" name="apply" id="no-apply">
-     
-    </div>
-    <div class="payment-total">Tổng tiền: </div>`
-    handleApllyIdCard()
-    
-
+    <div class="payment-seat">Vé ghế: ${seat}</div>
+    <div class="payment-total">Tổng tiền: ${currencyFormat.format(parseInt(totalMoney))}</div>`
 }
+{/* <div class="payment-time">Thời gian: </div> */ }
 
-function handleApllyIdCard(){
-    const applySale = document.querySelector(".payment-sale")
-    const apply = document.querySelector("#apply")
-    const unapply = document.querySelector("#no-apply")
-    const idCard = document.querySelector('.id-card')
-    apply.addEventListener('click', function addApply(){
-        applySale.innerHTML += ` <div class="id-card row ">
-        <div class="id-card__front col-lg-5">Mặt trước</div>
-        <div class="id-card__behind col-lg-5">Mặt sau</div>
-    </div>`
-    })
 
-    unapply.addEventListener('click', function(){
-        idCard.remove()
-    })
-
-}
-
-{/* <div class="id-card row ">
-<div class="id-card__front col-lg-5">Mặt trước</div>
-<div class="id-card__behind col-lg-5">Mặt sau</div>
-</div> */}
-
-export {handleChooseDate, handleChooseTime, listSeat, vnDate, nextDate, isMissing}
+export { handleChooseDate, handleChooseTime, listSeat, vnDate, nextDate, isMissing }
