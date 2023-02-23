@@ -49,14 +49,11 @@ function renderTime() {
     handleChooseTime(chooseTime)
 }
 
-<<<<<<< HEAD
 function vnDate(num) {
     const d = new Date()
     const next = new Date(d)
     next.setDate(d.getDate() + num)
-=======
 // Seat
->>>>>>> 3052b69b5de4e72299e5aad6b113dafd4afeaa3f
 
 const arrRow = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
 const theater = document.querySelector(".theater")

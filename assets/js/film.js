@@ -11,23 +11,12 @@ async function run() {
     const seeMore = document.querySelector(".body_content_film_btn_seemore")
     var isNow = true;
 
-<<<<<<< HEAD
     const filmsNow = []
     const filmsInFuture = []
-=======
 // fetch("https://www.galaxycine.vn/api/movie/showAndComming?")
 //     .then(function (response) { return response.json() })
 //     .then(movie => console.log(movie.movieShowing))
-//toogle option
-navFilms[0].addEventListener('click', () => {
-    navFilms[0].classList.add('active');
-    navFilms[1].classList.remove('active');
-    contentFilm.innerHTML = "";
-    isNow = true;
-    addThreeFilms(filmsNow)
-    addThreeFilms(filmsNow)
-})
->>>>>>> 3052b69b5de4e72299e5aad6b113dafd4afeaa3f
+
 
     //toogle option
     navFilms[0].addEventListener('click', () => {
@@ -51,16 +40,6 @@ navFilms[0].addEventListener('click', () => {
     //tạo hàm thêm vào 3 phim 
     function addThreeFilms(arrayFilms) {
 
-<<<<<<< HEAD
-        let html = "<div class='row align-items-start mt-1'>";
-        let ranNum;
-        for (let i = 0; i < 3; i++) {
-            do {
-                ranNum = Math.floor(Math.random() * films.length);
-            } while (arrayFilms.includes(ranNum));
-            arrayFilms.push(ranNum)
-            html += `<div class="col-md-4 film col-12 col-sm-12" id="${ranNum}">
-=======
     let html = "<div class='row align-items-start mt-1'>";
     let ranNum;
     for (let i = 0; i < 3; i++) {
@@ -69,7 +48,6 @@ navFilms[0].addEventListener('click', () => {
         } while (arrayFilms.includes(ranNum));
         arrayFilms.push(ranNum)
         html += `<div class="col-md-4 film col-12 col-sm-12" id="${ranNum}">
->>>>>>> 3052b69b5de4e72299e5aad6b113dafd4afeaa3f
             <span class="col_main">
                 <img src="./assets/img/films/${films[ranNum].img}.jpg" alt="${films[ranNum].name}" class="col_film">
                 <div class="col_sub">
@@ -92,7 +70,6 @@ navFilms[0].addEventListener('click', () => {
             }
         })
     }
-<<<<<<< HEAD
 
     //bắt sự kiện click vào "see more"
     seeMore.addEventListener("click", () => {
@@ -105,18 +82,6 @@ navFilms[0].addEventListener('click', () => {
             if (filmsInFuture.length <= films.length - 3)
                 addThreeFilms(filmsInFuture);
             else alert("Film is over!!")
-=======
-    html += "</div>";
-    let sourceHtml = contentFilm.innerHTML;
-    sourceHtml += html;
-    contentFilm.innerHTML = sourceHtml;
-    const buys = document.querySelectorAll('.col_sub');
-    buys.forEach((buy, index) => {
-        buy.onclick = () => {
-            let getId = buy.parentElement.parentElement.getAttribute("id")
-            window.localStorage.setItem("user", JSON.stringify(getId));
-            window.location = "./book.html"
->>>>>>> 3052b69b5de4e72299e5aad6b113dafd4afeaa3f
         }
     })
 
