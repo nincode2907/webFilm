@@ -279,9 +279,15 @@ body {
 }
 
 .login_wrapper_close {
+  border: none;
+  background-color: #fff;
   top: 10px;
   right: 15px;
   font-size: 1.8rem;
+}
+
+.login_wrapper_close:hover {
+  opacity: 0.5;
 }
 
 .login_wrapper_header_logo {
