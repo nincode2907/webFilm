@@ -5,6 +5,12 @@ const search = document.querySelector(".header_left_input_wrapper")
 const login = document.querySelector(".header_right_login")
 const loginForm = document.querySelector(".login")
 const closeLoginFormBtn = document.querySelector(".login_wrapper_close")
+const iconInSearch = document.querySelector('.header_left_input_group_icon')
+
+//remove animation for header icon in search
+setTimeout(() => {
+    iconInSearch.classList.remove('newbie')
+},3000)
 
 
 window.addEventListener("scroll", () => {
@@ -27,4 +33,18 @@ login.onclick = () => {
 
 closeLoginFormBtn.onclick = () => {
     loginForm.classList.add("hidden_form")
+}
+
+function arrToObj(arr) {
+    let obj = {};
+
+    arr.forEach(i => {
+        obj = {
+            ...obj,
+            [i[0]]: i[1]
+        }
+    })
+
+    // console.log(obj);
+    return obj;
 }

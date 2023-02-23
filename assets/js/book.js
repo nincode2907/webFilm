@@ -16,7 +16,7 @@ window.addEventListener("load", function () {
 
 // Date
 
-function renderDate(randNum){
+function renderDate(randNum) {
     for (let i = 0; i < randNum; i++) {
         dateFilm.innerHTML += `<div class="display col-lg-2 col-md-2 col-sm-2">
         <div class="display__date">${nextDate(i)}</div>
@@ -38,7 +38,7 @@ function nextDate(num) {
 function vnDate(num) {
     const d = new Date()
     const next = new Date(d)
-    next.setDate(d.getDate()+num)
+    next.setDate(d.getDate() + num)
 
     switch (next.getDay()) {
         case 0: return "Chủ Nhật"
