@@ -481,11 +481,13 @@ body {
 
 @keyframes filmFade {
   0% {
-    transform: translateY(50px);
+    transform: translateY(30px);
+    opacity: 0;
   }
 
   100% {
     transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -530,9 +532,18 @@ body {
   color: var(--primary-color);
   border-color: var(--primary-color);
   max-width: 145px;
+  /* transition: all 0.5s ease-out; */
   display: block;
 }
 
+.body_content_film_btn_seemore:hover {
+  color: #fff;
+  background-color: var(--primary-color);
+}
+
+.body_content_film_btn_seemore_icon {
+  padding-left: 10px;
+}
 .seeMoreScroll {
   animation: seeMore 2s ease 0s 1 normal forwards;
 }
@@ -567,15 +578,6 @@ body {
   90% {
     transform: rotate(2deg);
   }
-}
-
-.body_content_film_btn_seemore:hover {
-  color: #fff;
-  background-color: var(--primary-color);
-}
-
-.body_content_film_btn_seemore_icon {
-  padding-left: 10px;
 }
 
 .body_content_about {
