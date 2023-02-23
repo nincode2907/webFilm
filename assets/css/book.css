@@ -342,7 +342,10 @@ input[type="file"] {
 
 .payment-seat {}
 
-.payment-img {}
+.payment-img {
+    width: 300px;
+    height: 250px;
+}
 
 .payment-sale {
     margin: 10px 0;

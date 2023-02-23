@@ -34,7 +34,6 @@ function handleChooseDate(arr) {
                 }
             })
             element.classList.add('check')
-            console.log(element.value);
         })
     }
 }
@@ -68,7 +67,7 @@ function vnDate(num) {
             break;
         case 5: return "Thứ Sáu"
             break;
-        case 6: return "Thứ Bảy"
+        default: return "Thứ Bảy"
             break;
     }
 }
@@ -186,10 +185,14 @@ handleChooseOnly(bank)
 
 const payment = document.querySelector('.payment-tickets')
 
-function renderForm(seat, quantity) {
+function renderForm(seat, quantity,) {
     const d = new Date()
     const day = d.getDay()
     const currencyFormat = new Intl.NumberFormat("vi-VN", { style: 'currency', currency: "VND" })
+    const time = document.querySelectorAll('.display__time.check')
+    const date = document.querySelector('.display.check')
+
+
     let totalMoney = 0
     if (day == 0 || day == 6) {
         totalMoney += quantity * 120000
@@ -199,10 +202,20 @@ function renderForm(seat, quantity) {
     }
     payment.innerHTML = `<div class="payment-film__name">Tên phim: ${films[JSON.parse(user)].name}</div>
     <img src="./assets/img/films/${films[JSON.parse(user)].img}.jpg" class="payment-img" alt="" />
+    <div class="payment-date">Ngày: ${date.children[0].innerText + " - " + date.children[1].innerText}</div>
+    <div class="payment-time">Thời gian: ${addNodeItem(time)}</div >
     <div class="payment-seat">Vé ghế: ${seat}</div>
     <div class="payment-total">Tổng tiền: ${currencyFormat.format(parseInt(totalMoney))}</div>`
 }
-{/* <div class="payment-time">Thời gian: </div> */ }
 
+function addNodeItem(node) {
+    console.log(node);
+    console.log(typeof node);
+    let arr = []
+    for (let index = 0; index < node.length; index++) {
+        arr.push(node.item(index).innerText);
+    }
+    return arr.join(" ")
+}
 
 export { handleChooseDate, handleChooseTime, listSeat, vnDate, nextDate, isMissing }
