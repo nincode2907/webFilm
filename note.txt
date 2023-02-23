@@ -1,11 +1,18 @@
 1. chỉnh sửa theo bố cục như sau:
 - nội dung chính gồm 3 phần: 
     + Phim: poster phim và nội dung phim => OK
-    + Đặt vé: Ngày => Ok, thời gian, giá hôm nay, rạp, chọn ghế.
+    + Đặt vé: Ngày => Ok, thời gian => Ok, giá hôm nay => OK, chọn ghế => OK.
     + Thanh toán: show ra tổng tiền và chọn phương thức thanh toán.
 2. logo
 3. thêm vào database
 bonus. chọn ghế:
     + sắp theo dãy (có 12 dãy từ A -> L, mỗi dãy có 18 ghế (L có 12 ghế))
     + lưu vào cookies để biết chỗ nào đã được đặt
+<<<<<<< HEAD
     
+=======
+- cách chọn ghế:
++ lấy id dãy 
+-> c1: 
+
+>>>>>>> 3052b69b5de4e72299e5aad6b113dafd4afeaa3f
