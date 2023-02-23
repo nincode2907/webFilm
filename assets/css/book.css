@@ -331,9 +331,18 @@ input[type="file"] {
     z-index: 5;
 }
 
+.payment-tickets {
+    text-align: center;
+}
+
 .payment-tickets>div,
 .payment-tickets>img {
     padding-bottom: 10px;
+    filter: drop-shadow(5px 5px 5px #ccc);
+}
+
+.payment-tickets>div:nth-child(odd) {
+    color: #FF0000;
 }
 
 .payment-film___name {}

@@ -209,13 +209,11 @@ function renderForm(seat, quantity,) {
 }
 
 function addNodeItem(node) {
-    console.log(node);
-    console.log(typeof node);
     let arr = []
     for (let index = 0; index < node.length; index++) {
         arr.push(node.item(index).innerText);
     }
-    return arr.join(" ")
+    return arr.join(" | ")
 }
 
 export { handleChooseDate, handleChooseTime, listSeat, vnDate, nextDate, isMissing }
