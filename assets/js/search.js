@@ -54,8 +54,6 @@ async function run() {
         resultList.innerHTML = html;
     }
 
-    let timer;
-    //bắt sự kiện nhập bàn phím khi search, sau 750ms nếu không nhập tiếp thì mới search
     input.addEventListener("input", (e) => {
         clearTimeout(timer);
         iconInSearch.classList.remove('fa-magnifying-glass');
@@ -66,7 +64,7 @@ async function run() {
             iconInSearch.classList.add('fa-magnifying-glass');
             renderResult(arr);
         }, 750);
-    });
+    })
 }
 
 run()
