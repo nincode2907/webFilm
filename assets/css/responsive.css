@@ -4,12 +4,10 @@
   } */
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (max-width: 75em) {
-}
+@media (max-width: 75em) {}
 
 /* Large devices (desktops, 992px and up) */
-@media (max-width: 62em) {
-}
+@media (max-width: 62em) {}
 
 /* Medium devices (tablets, 768px and up) */
 @media screen and (max-width: 48em) {
@@ -41,7 +39,6 @@
     height: 100%;
     width: 100%;
     background-color: #fff;
-    z-index: 9;
     transform: translateX(0);
     opacity: 1;
   }
