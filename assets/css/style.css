@@ -77,14 +77,20 @@ body {
   z-index: 99;
 }
 
-.search_fade {
-  display: block;
-}
-
 .header_left_input_group_result_item {
   width: 100%;
   height: 2.4rem;
   border-bottom: 1px solid rgb(230, 224, 224);
+}
+
+.header_left_input_group_result_item span {
+  padding-left: 10px;
+  line-height: 2.4rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(133, 128, 128);
 }
 
 .header_left_input_group_result_item:hover a {
@@ -113,6 +119,12 @@ body {
   font-size: 0.8rem;
   color: #a0a3a7;
   outline: none;
+}
+
+.header_left_input_group_input:focus + .header_left_input_group_result_list,
+.header_left_input_group_input:not(:placeholder-shown)
+  + .header_left_input_group_result_list {
+  display: block !important;
 }
 
 .header_right_menu_tablet {

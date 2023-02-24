@@ -12,11 +12,6 @@ async function run() {
     //tạo mảng tên phim thường ko dấu
     const standardFilmsName = films.map(f => toNonAccentVietnamese(f.name.toLowerCase()));
 
-    //toggle ô search
-    input.addEventListener("click", () => {
-        resultList.classList.toggle("search_fade")
-    })
-
     //hàm chuẩn hóa bỏ dấu tiếng việt
     function toNonAccentVietnamese(str) {
         str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
@@ -44,7 +39,7 @@ async function run() {
     function renderResult(arr) {
         let html = ""
         if(!arr.length) {
-            html += '<li class="header_left_input_group_result_item">No matching films...</li>'
+            html += '<li class="header_left_input_group_result_item"><span>No matching</span></li>'
         }
         else {
             arr.forEach(i => {
@@ -54,6 +49,7 @@ async function run() {
         resultList.innerHTML = html;
     }
 
+    let timer;
     input.addEventListener("input", (e) => {
         clearTimeout(timer);
         iconInSearch.classList.remove('fa-magnifying-glass');

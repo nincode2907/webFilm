@@ -12,7 +12,6 @@ setTimeout(() => {
     iconInSearch.classList.remove('newbie')
 },3000)
 
-
 window.addEventListener("scroll", () => {
     let value = window.scrollY;
     if (value >= 880) {
@@ -27,7 +26,6 @@ menuBtn.onclick = () => {
 }
 
 login.onclick = () => {
-    console.log(1);
     loginForm.classList.remove("hidden_form")
 }
 
@@ -44,7 +42,5 @@ function arrToObj(arr) {
             [i[0]]: i[1]
         }
     })
-
-    // console.log(obj);
     return obj;
 }
