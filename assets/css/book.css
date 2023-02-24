@@ -5,13 +5,17 @@
 }
 
 hmtl {
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 /* BODY */
 
 .body {
+    padding: 0 140px;
+}
+
+.contain-film {
     width: 80%;
     margin: 0 auto;
 }
@@ -59,7 +63,6 @@ img.list-film {
     opacity: 0.5;
     font-size: 1.125rem;
     border-bottom: 1px solid #a5a2a2cc;
-
 }
 
 .book-date,
@@ -82,7 +85,6 @@ img.list-film {
 
 .film-content {
     opacity: 0.75;
-
 }
 
 .book-date.row {
@@ -97,9 +99,8 @@ img.list-film {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
 }
 
-
 .display__day {
-    font-size: .75rem;
+    font-size: 0.75rem;
 }
 
 .book-time {
@@ -117,7 +118,7 @@ img.list-film {
 }
 
 .display__time.fade {
-    opacity: .5;
+    opacity: 0.5;
     cursor: not-allowed;
     user-select: none;
 }
@@ -125,7 +126,7 @@ img.list-film {
 .price-today {}
 
 .price-today .no-sales {
-    opacity: .75;
+    opacity: 0.75;
 }
 
 .price-today .sales {
@@ -368,7 +369,7 @@ input[type="file"] {
 }
 
 .payment-tickets>div:nth-child(odd) {
-    color: #FF0000;
+    color: #ff0000;
 }
 
 .payment-film___name {}
@@ -388,7 +389,6 @@ input[type="file"] {
 
 .payment-sale>input {
     margin-right: 10px;
-
 }
 
 img.bank {
@@ -431,10 +431,10 @@ label:hover>img.bank {
 }
 
 input {
-    border: 1px solid #AEBDCA;
+    border: 1px solid #aebdca;
 }
 
-input[type='text'] {
+input[type="text"] {
     padding: 5px 10px;
 }
 
@@ -454,8 +454,10 @@ button.payment-done {
 
 .footer {
     background-color: #000;
-    width: 100%;
+    max-width: 1920px;
+    overflow-x: hidden;
     color: #cccc;
+    margin: auto;
 }
 
 .contain-about.row {
@@ -514,19 +516,19 @@ ul>a.link-genre:hover {
 }
 
 .fb-icon:hover {
-    color: #0066CC;
+    color: #0066cc;
 }
 
 .insta-icon:hover {
-    color: #FF9933;
+    color: #ff9933;
 }
 
 .twi-icon:hover {
-    color: #0099CC;
+    color: #0099cc;
 }
 
 .ytb-icon:hover {
-    color: #FF0033;
+    color: #ff0033;
 }
 
 /* Handle */

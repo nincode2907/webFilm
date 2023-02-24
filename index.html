@@ -28,7 +28,7 @@
           <div class="header_left_input_group">
             <input type="text" class="form-control header_left_input_group_input" id="exampleFormControlInput1"
               placeholder="Tìm tên phim ..." />
-            <i class="fa-solid fa-magnifying-glass header_left_input_group_icon"></i>
+            <i class="fa-solid fa-magnifying-glass header_left_input_group_icon newbie"></i>
             <ul class="header_left_input_group_result_list"></ul>
           </div>
         </div>
@@ -63,9 +63,15 @@
                 <span class="login_wrapper_content_ways_list_item_description">Sử dụng email / số điện thoại</span>
               </li>
               <li class="login_wrapper_content_ways_list_item google_way">
-                <img src="https://accounts.fullstack.edu.vn/assets/images/signin/google-18px.svg" alt="google"
-                  class="login_wrapper_content_ways_list_item_img" />
-                <span class="login_wrapper_content_ways_list_item_description">Tiếp tục với Google</span>
+                <!-- <img
+                    src="https://accounts.fullstack.edu.vn/assets/images/signin/google-18px.svg"
+                    alt="google"
+                    class="login_wrapper_content_ways_list_item_img"
+                  />
+                  <span class="login_wrapper_content_ways_list_item_description"
+                    >Tiếp tục với Google</span
+                  > -->
+                <div class="g-signin2" data-onsuccess="onSignIn"></div>
               </li>
               <li class="login_wrapper_content_ways_list_item google_way">
                 <img src="https://accounts.fullstack.edu.vn/assets/images/signin/facebook-18px.svg" alt="google"
@@ -222,7 +228,7 @@
     <div class="footer">
       <div class="contain-about row">
         <div class="about col-lg-3 col-sm-12">
-          <div class="text-title">Thông tin về chúng tôi</div>
+          <div class="text-title">About</div>
           <p class="para">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
             sequi debitis eligendi eum, culpa obcaecati, delectus quas illum
@@ -232,40 +238,40 @@
         </div>
         <div class="genre col-lg-3 col-sm-12">
           <ul class="title__list">
-            <div class="text-title">Thể loại</div>
+            <div class="text-title">Genre</div>
             <a href="#" class="link-genre">
               <li class="title__list-items">
                 <i class="fas fa-caret-right right-icon"></i>
-                Kinh dị
+                Horror
               </li>
             </a>
             <a href="#" class="link-genre">
               <li class="title__list-items">
                 <i class="fas fa-caret-right right-icon"></i>
-                Hoạt hình
+                Horror
               </li>
             </a>
             <a href="#" class="link-genre">
               <li class="title__list-items">
                 <i class="fas fa-caret-right right-icon"></i>
-                Hành động
+                Horror
               </li>
             </a>
           </ul>
         </div>
         <div class="book col-lg-3 col-sm-12">
           <ul class="title__list">
-            <div class="text-title">Đặt vé</div>
+            <div class="text-title">Book Tickets</div>
             <a href="#" class="link-genre">
               <li class="title__list-items">
                 <i class="fas fa-caret-right right-icon"></i>
-                Đặt vé ngay
+                Buy Tickets
               </li>
             </a>
           </ul>
         </div>
         <div class="connect col-lg-3 col-sm-12">
-          <div class="text-title">Liên hệ</div>
+          <div class="text-title">Connect with us</div>
           <i class="fab fa-facebook-square fb-icon"></i>
           <i class="fab fa-instagram-square insta-icon"></i>
           <i class="fab fa-twitter-square twi-icon"></i>
@@ -275,7 +281,6 @@
     </div>
   </div>
   <!-- <script src="https://apis.google.com/js/platform.js" async defer></script> -->
-  <script src="https://apis.google.com/js/api:client.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
@@ -286,9 +291,52 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
   <script src="./assets/js/main.js"></script>
-  <script type="module" src="./assets/js/search.js"></script>
   <script type="module" src="./assets/js/film.js"></script>
-  <script src="./assets/js/googleAuthur.js"></script>
+  <script type="module" src="./assets/js/search.js"></script>
+  <!-- <script src="./assets/js/googleAuthur.js"></script> -->
+  <!-- <script>
+      // 987808496131-q8j0mft59plokscfnr1h6cvgrjdpvpbn.apps.googleusercontent.com
+      // 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
+
+      // Load the Google Sign-In API library
+      gapi.load("auth2", function () {
+        gapi.auth2
+          .init({
+            client_id:
+              "987808496131-q8j0mft59plokscfnr1h6cvgrjdpvpbn.apps.googleusercontent.com", // Replace with your client ID
+            scope: "profile email",
+          })
+          .then(function () {
+            // Get the current user's profile information
+            var profile = gapi.auth2
+              .getAuthInstance()
+              .currentUser.get()
+              .getBasicProfile();
+
+            // Print the user's profile information
+            console.log("ID: " + profile.getId());
+            console.log("Full Name: " + profile.getName());
+            console.log("Given Name: " + profile.getGivenName());
+            console.log("Family Name: " + profile.getFamilyName());
+            console.log("Image URL: " + profile.getImageUrl());
+            console.log("Email: " + profile.getEmail());
+          });
+      });
+
+      function onSignIn(googleUser) {
+        // Get the user's ID token and basic profile information
+        var id_token = googleUser.getAuthResponse().id_token;
+        var profile = googleUser.getBasicProfile();
+
+        // Print the user's profile information
+        console.log("ID: " + profile.getId());
+        console.log("Full Name: " + profile.getName());
+        console.log("Given Name: " + profile.getGivenName());
+        console.log("Family Name: " + profile.getFamilyName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
+      }
+    </script> -->
 </body>
 
 </html>

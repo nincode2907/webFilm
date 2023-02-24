@@ -49,6 +49,11 @@ function renderTime() {
     handleChooseTime(chooseTime)
 }
 
+// function vnDate(num) {
+//     const d = new Date()
+//     const next = new Date(d)
+//     next.setDate(d.getDate() + num)
+// }
 // Seat
 
 const arrRow = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
