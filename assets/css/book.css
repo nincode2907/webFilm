@@ -16,6 +16,9 @@ hmtl {
     margin: 0 auto;
 }
 
+input {
+    border-radius: 5px;
+}
 
 .contain-film {}
 
@@ -46,6 +49,8 @@ hmtl {
 img.list-film {
     width: 100%;
     height: 100%;
+    filter: drop-shadow(5px 5px 5px #ccc);
+    border-radius: 10px;
 }
 
 .movie-items {}
@@ -62,6 +67,12 @@ img.list-film {
 .price-today,
 .choose-seat {
     padding-bottom: 10px;
+}
+
+.book-date>p,
+.book-time>p {
+    padding: 0;
+    color: #a5a2a2cc;
 }
 
 .film-name {
@@ -102,6 +113,7 @@ img.list-film {
     border-radius: 10px;
     padding: 8px 0;
     cursor: pointer;
+    box-shadow: 5px 5px 5px #ccc;
 }
 
 .display__time.fade {
@@ -159,6 +171,11 @@ button.form-seat {
     color: #ffff;
     background-color: #303030;
     border: none;
+    filter: drop-shadow(5px 5px 5px #ccc);
+}
+
+button.form-seat:hover {
+    background-color: #33eb61;
 }
 
 .theater {
@@ -221,6 +238,10 @@ button.form-seat {
     margin-right: 5px;
 }
 
+.seat:hover {
+    cursor: pointer;
+}
+
 .seat__left-item.row,
 .seat__middle-item.row,
 .seat__right-item.row {
@@ -233,7 +254,8 @@ button.form-seat {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 99999;
+    min-height: 100vh;
+    z-index: 9;
     background-color: #000;
     display: none;
 }
@@ -284,6 +306,10 @@ button.form-seat {
     color: #fff;
     border: 2px solid #0bc90b;
     box-shadow: 0 0 5px #fff, 0 0 5px #0bc90b;
+}
+
+.done:hover {
+    background-color: #ccc;
     cursor: pointer;
 }
 
@@ -371,6 +397,17 @@ img.bank {
     object-fit: scale-down;
     padding: 10px;
     border-radius: 5px;
+}
+
+.payment-info {
+    border-left: 2px solid #FF0000;
+}
+
+.payment-info form {
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .payment-info__bank input[type="radio"] {
@@ -501,7 +538,7 @@ ul>a.link-genre:hover {
 .display.check,
 .display__time.check,
 img.bank.check {
-    border: 2px solid red;
+    outline: 2px solid red;
 }
 
 .seat.check {
@@ -509,5 +546,6 @@ img.bank.check {
 }
 
 .seat.chosen {
+    pointer-events: none;
     background-color: orange;
 }

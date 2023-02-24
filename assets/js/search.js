@@ -34,13 +34,14 @@ function filterResult(keyword) {
 function renderResult(arr) {
     let html = ""
     arr.forEach(i => {
-        html += `<li class="header_left_input_group_result_item"><a href="#">${films[i].name}</a></li>`
+        html += `<li class="header_left_input_group_result_item"><a href="book.html">${films[i].name}</a></li>`
     })
     resultList.innerHTML = html;
 }
 
 input.addEventListener("input", (e) => {
     const arr = filterResult(toNonAccentVietnamese(e.target.value.toLowerCase()))
+    console.log(1);
     renderResult(arr)
 }
 )  

@@ -24,7 +24,7 @@ window.addEventListener("load", function () {
 
 function renderDate(randNum) {
     for (let i = 0; i < randNum; i++) {
-        dateFilm.innerHTML += `<div class="display col-lg-2 col-md-2 col-sm-2">
+        dateFilm.innerHTML += `<div class="display col-lg-2 col-md-3 col-sm-2">
         <div class="display__date">${nextDate(i)}</div>
         <div class="display__day">${vnDate(i)}</div>
       </div>`
@@ -40,9 +40,9 @@ const listTime = ["09:30", "10:30", "13:00", "13:45", "14:00", "14:40", "15:00",
 function renderTime() {
     listTime.map(time => {
         if (isMissing(time)) {
-            timeFilm.innerHTML += `<div class="display__time fade col-lg-1 col-md-1 col-sm-1">${time}</div>`
+            timeFilm.innerHTML += `<div class="display__time fade col-lg-1 col-md-2 col-sm-1">${time}</div>`
         } else {
-            timeFilm.innerHTML += `<div class="display__time col-lg-1 col-md-1 col-sm-1">${time}</div>`
+            timeFilm.innerHTML += `<div class="display__time col-lg-1 col-md-2 col-sm-1">${time}</div>`
         }
     })
     const chooseTime = document.querySelectorAll(".display__time")

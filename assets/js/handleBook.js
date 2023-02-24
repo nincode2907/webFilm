@@ -137,17 +137,13 @@ const closeRoom = document.querySelector(".close-choosing")
 const room = document.querySelector(".room")
 const openRoom = document.querySelector(".form-seat")
 
-closeRoom.addEventListener('click', function () {
-    room.classList.remove("open")
-})
-
 openRoom.addEventListener('click', function () {
     room.classList.add("open")
 })
 
 function handleChooseSeat(arrElement) {
     const choseThis = document.querySelector(".done")
-    const showSeat = document.querySelector(".show-seat")
+    const showSeat = document.querySelector(".show-seat__item")
     var arrSeat = []
     for (const element of arrElement) {
         const getRow = element.parentElement.parentElement.parentElement.getAttribute("id")
@@ -164,19 +160,23 @@ function handleChooseSeat(arrElement) {
                 if (!arrSeat.includes(getRow + element.innerText)) {
                     arrSeat.push(getRow + element.innerText)
                     arrSeat.sort()
+                    console.log(arrSeat);
                     return arrSeat
                 }
             }
+            showSeat.innerText = " "
+            showSeat.innerText += " " + arrSeat.join(" ")
+
+            if (arrSeat.length > 0) {
+                renderForm(arrSeat.join(" "), arrSeat.length)
+            }
         })
     }
-    closeRoom.addEventListener('click', function () {
-        showSeat.innerText += " " + arrSeat.join(" ")
-
-        if (arrSeat.length > 0) {
-            renderForm(arrSeat.join(" "), arrSeat.length)
-        }
-    })
 }
+
+closeRoom.addEventListener('click', function () {
+    room.classList.remove("open")
+})
 
 // Payment
 
@@ -195,10 +195,10 @@ function renderForm(seat, quantity,) {
 
     let totalMoney = 0
     if (day == 0 || day == 6) {
-        totalMoney += quantity * 120000
+        totalMoney += quantity * 120000 * time.length
     }
     else {
-        totalMoney += quantity * 90000
+        totalMoney += quantity * 90000 * time.length
     }
     payment.innerHTML = `<div class="payment-film__name">Tên phim: ${films[JSON.parse(user)].name}</div>
     <img src="./assets/img/films/${films[JSON.parse(user)].img}.jpg" class="payment-img" alt="" />

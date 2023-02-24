@@ -1,0 +1,108 @@
+/* Responsive for room on tablet */
+@media screen and (max-width: 1200px) {
+    .theater {
+        width: 100%;
+    }
+}
+
+/* Tablet  */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .title {
+        margin-top: 15px;
+    }
+
+
+    /* Book ticket */
+    .book-date,
+    .book-time,
+    .price-today,
+    .choose-seat {
+        justify-content: center;
+    }
+
+
+    /* Payment */
+    .payment-info {
+        border-left: none;
+        border-top: 2px solid #ff0000;
+        padding: 0;
+    }
+
+    .payment-info__form {
+        margin-top: 15px;
+    }
+
+    .enter-number {
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .body {
+        width: 90%;
+    }
+
+    .theater {
+        width: 100%;
+    }
+
+    .theater>div {
+        display: none;
+    }
+
+    .glossary {
+        display: none;
+    }
+
+    /* Payment */
+
+    .id-card.row {
+        padding: 0;
+    }
+
+    .payment-info {
+        border-left: none;
+        border-top: 2px solid #ff0000;
+        padding: 0;
+    }
+
+    .payment-info__form {
+        margin-top: 15px;
+    }
+
+    .payment-info form {
+        padding: 0;
+    }
+
+    .enter-number {
+        margin-top: 10px;
+    }
+
+    .enter-number input {
+        width: 100%;
+    }
+
+    .enter-number button {
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .theater::before {
+        content: "Chân thành xin lỗi nền tảng smartphone không được hỗ trợ đặt vé trên website. Vui lòng tải app hoặc chuyển sang nền tảng khác";
+        width: 100vw;
+        height: 100vh;
+        background-color: #fff;
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-align: justify;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+    }
+}
