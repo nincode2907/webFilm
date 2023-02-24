@@ -83,19 +83,20 @@ body {
 
 .header_left_input_group_result_item {
   width: 100%;
-  padding: 10px 15px;
+  height: 2.4rem;
   border-bottom: 1px solid rgb(230, 224, 224);
 }
 
-.header_left_input_group_result_item:hover {
-  background-color: rgb(252, 248, 248);
+.header_left_input_group_result_item:hover a {
+  background-color: rgb(234, 223, 223);
 }
 
 .header_left_input_group_result_item a {
+  width: 100%;
   text-decoration: none;
   font-size: 0.9rem;
-  line-height: 1.1rem;
-  height: 1.1rem;
+  line-height: 2.4rem;
+  padding-left: 10px;
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
   overflow: hidden;

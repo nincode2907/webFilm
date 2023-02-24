@@ -9,6 +9,11 @@ const dateFilm = document.querySelector(".book-date")
 const timeFilm = document.querySelector(".book-time")
 // Render
 window.addEventListener("load", function () {
+    //get id
+    const urlParams = new URLSearchParams(window.location.search)
+    const id = urlParams.get("id")
+    console.log(id);
+
     const rand = Math.floor(Math.random() * 5 + 2)
 
     listFilms.setAttribute("src", `./assets/img/films/${films[JSON.parse(user)].img}.jpg`)

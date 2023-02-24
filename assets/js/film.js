@@ -120,7 +120,7 @@ async function run() {
             newSpan.classList.add('col_main');
             newSpan.innerHTML = `<img src="./assets/img/films/${films[ranNum].img}.jpg" alt="${films[ranNum].name}" class="col_film">
             <div class="col_sub buy">
-                <button type="button" class="btn btn-outline-warning col_sub_btn">Mua vé</button>
+                <a href="./book.html?id=${films[ranNum].id}" class="btn btn-outline-warning col_sub_btn">Mua vé</a>
             </div>`;
 
             let newH3 = document.createElement('h3');
@@ -132,16 +132,6 @@ async function run() {
             newRow.appendChild(newFilms);
             }, 500 * i);
         }
-        setTimeout(() => {
-            let buys = document.querySelectorAll('.buy');
-            buys.forEach((buy, index) => {
-                buy.onclick = () => {
-                    let getId = buy.parentElement.parentElement.getAttribute("id")
-                    window.localStorage.setItem("user", JSON.stringify(getId));
-                    window.location = "./book.html"
-                }
-            })
-        }, 1100);
         }
 
     addThreeFilms(filmsNow);
@@ -149,3 +139,13 @@ async function run() {
 }
 
 run();
+// setTimeout(() => {
+//     let buys = document.querySelectorAll('.buy');
+//     buys.forEach((buy, index) => {
+//         buy.onclick = () => {
+//             let getId = buy.parentElement.parentElement.getAttribute("id")
+//             window.localStorage.setItem("user", JSON.stringify(getId));
+//             window.location = "./book.html"
+//         }
+//     })
+// }, 1100);

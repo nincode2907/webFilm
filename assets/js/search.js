@@ -44,11 +44,11 @@ async function run() {
     function renderResult(arr) {
         let html = ""
         if(!arr.length) {
-            html += '<li class="header_left_input_group_result_item"><a href="#">No matching films...</a></li>'
+            html += '<li class="header_left_input_group_result_item">No matching films...</li>'
         }
         else {
             arr.forEach(i => {
-                html += `<li class="header_left_input_group_result_item"><a href="#">${films[i].name}</a></li>`
+                html += `<li class="header_left_input_group_result_item"><a href="./book.html?id=${films[i].id}">${films[i].name}</a></li>`
             })
         }
         resultList.innerHTML = html;
