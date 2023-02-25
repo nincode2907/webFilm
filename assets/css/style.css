@@ -234,9 +234,6 @@ body {
   top: -1px;
 }
 
-.header_right_menu_tablet {
-}
-
 .header_right_menu_tablet_icon {
   /* color: #a0a3a7; */
   font-size: 1rem;
@@ -333,10 +330,6 @@ body {
   margin-top: 14px;
 }
 
-.g-signin2 {
-  /* display: none; */
-}
-
 .login_wrapper_content_ways_list_item:hover {
   background-color: #dce0e3;
   cursor: pointer;
@@ -383,9 +376,6 @@ body {
 .login_wrapper_footer a {
   color: #35414c;
   text-decoration: underline;
-}
-
-.login_wrapper_footer a:hover {
 }
 
 .swiper {
@@ -591,9 +581,6 @@ body {
   90% {
     transform: rotate(2deg);
   }
-}
-
-.body_content_about {
 }
 
 .body_content_about_headding {
