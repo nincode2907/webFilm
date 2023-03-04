@@ -40,7 +40,7 @@ async function run() {
         isNow = false;
 
         //nếu là lần đầu qua phim sắp chiếu thì thêm 6 phim, lần sau lấy lại cache
-        if(!isVisitedFilmsInFuture) {
+        if (!isVisitedFilmsInFuture) {
             addThreeFilms(filmsInFuture)
             addThreeFilms(filmsInFuture)
             isVisitedFilmsInFuture = true;
@@ -100,39 +100,39 @@ async function run() {
 
         //tạo element div 
         let newRow = document.createElement('div');
-        newRow.classList.add('row','mt-1','align-items-start');
+        newRow.classList.add('row', 'mt-1', 'align-items-start');
         contentFilm.appendChild(newRow);
         for (let i = 0; i < 3; i++) {
 
             //thêm từng phim lần lượt
             setTimeout(() => {
-            //random film and push index into array film
-            do {
-                ranNum = Math.floor(Math.random() * films.length);
-            } while (arrayFilms.includes(ranNum));
-            arrayFilms.push(ranNum);
+                //random film and push index into array film
+                do {
+                    ranNum = Math.floor(Math.random() * films.length);
+                } while (arrayFilms.includes(ranNum));
+                arrayFilms.push(ranNum);
 
-            let newFilms = document.createElement('div');
-            newFilms.classList.add('col-md-4','film','col-sm-12','col-12');
-            newFilms.setAttribute("id", ranNum);
+                let newFilms = document.createElement('div');
+                newFilms.classList.add('col-md-4', 'film', 'col-sm-12', 'col-12');
+                newFilms.setAttribute("id", ranNum);
 
-            let newSpan = document.createElement('span');
-            newSpan.classList.add('col_main');
-            newSpan.innerHTML = `<img src="./assets/img/films/${films[ranNum].img}.jpg" alt="${films[ranNum].name}" class="col_film">
+                let newSpan = document.createElement('span');
+                newSpan.classList.add('col_main');
+                newSpan.innerHTML = `<img src="./assets/img/films/${films[ranNum].img}.jpg" alt="${films[ranNum].name}" class="col_film">
             <div class="col_sub buy">
                 <a href="./book.html?id=${films[ranNum].id}" class="btn btn-outline-warning col_sub_btn">Mua vé</a>
             </div>`;
 
-            let newH3 = document.createElement('h3');
-            newH3.classList.add('col_name');
-            newH3.innerHTML = films[ranNum].name;
+                let newH3 = document.createElement('h3');
+                newH3.classList.add('col_name');
+                newH3.innerHTML = films[ranNum].name;
 
-            newFilms.appendChild(newSpan);
-            newFilms.appendChild(newH3);
-            newRow.appendChild(newFilms);
+                newFilms.appendChild(newSpan);
+                newFilms.appendChild(newH3);
+                newRow.appendChild(newFilms);
             }, 500 * i);
         }
-        }
+    }
 
     addThreeFilms(filmsNow);
     addThreeFilms(filmsNow);

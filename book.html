@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book Tickets</title>
   <link rel="icon" href="https://iconarchive.com/download/i90203/icons8/windows-8/Cinema-Spiderman-New.ico"
     type="icon/image image" />
@@ -14,12 +14,10 @@
   <!-- Font   -->
   <link rel="preconnect" href="https:///fonts.googleapis.com" />
   <link rel="preconnect" href="https:/fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap"
-    rel="stylesheet" />
   <script src="https://kit.fontawesome.com/8bab96838f.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <link rel="stylesheet" href="./assets/css/responsive.css" />
+  <!-- <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/responsive.css" /> -->
+  <link rel="stylesheet" href="./assets/css/common.css">
   <link rel="stylesheet" href="./assets/css/book.css" />
   <link rel="stylesheet" href="./assets/css/responsive-book.css">
 </head>
@@ -97,7 +95,7 @@
       <div class="text__title-body">Phim</div>
       <div class="contain-film row">
         <div class="movie-items col-sm-12 col-lg-6">
-          <img src="./assets/img/films/2.jpg" class="list-film" alt="" />
+          <img src="./assets/img/films/" class="list-film" alt="" />
         </div>
 
         <div class="introduce-film col-sm-12 col-lg-6">
@@ -122,7 +120,7 @@
           <div class="sales col-lg-12 col-md-8"> Giá khi áp dụng thẻ học sinh, sinh viên: </div>
         </div>
         <div class="choose-seat row">
-          <div class="choose col-lg-12">
+          <div class="choose col-lg-12 col-md-12 col-sm-12">
             Vui lòng chọn ghế:
             <button class="form-seat">
               Chọn
@@ -132,100 +130,101 @@
               <span class="show-seat__item">
               </span>
             </div>
-            <div class="room">
-              <div class="room-close">
-                <i class="fa-solid fa-xmark close-choosing"></i>
-              </div>
-              <div class="theater row">
-                <div class="screen col-lg-12">MÀN HÌNH</div>
-                <div class="col-lg-12"></div>
-                <div class="done">
-                  Chọn
-                </div>
-              </div>
-              <div class="glossary">
-                <div class="chose">Đã được chọn</div>
-                <div class="choosing">Đang chọn</div>
-              </div>
-
-            </div>
           </div>
-          <div class="text__title-body">Thanh Toán</div>
-          <div class="payment row">
-            <div class="payment-tickets col-lg-6"></div>
+        </div>
 
-            <div class="payment-info col-lg-6">
-              <form action="" class="payment-info__form">
-                <div class="payment-info__customer">
-                  <label for="full-name">Họ và tên:</label>
-                  <input type="text" name="" id="full-name" />
-                </div>
-                <div class="payment-info__email">
-                  <label for="email">Email:</label>
-                  <input type="text" name="" id="email" />
-                </div>
-                <div class="payment-info__phone">
-                  <label for="phone">Số điện thoại:</label>
-                  <input type="text" name="" id="phone" />
-                </div>
-                <div class="payment-sale">
-                  <label for="apply">Áp dụng thẻ sinh viên </label>
-                  <input type="radio" name="apply" id="apply" />
-                  <label for="no-apply">Không áp dụng </label>
-                  <input type="radio" name="apply" id="no-apply" />
-                  <div class="id-card row">
-                    <div class="id-card__front col-lg-5 g-0">
-                      <label for="front-img"> Mặt trước </label>
-                      <input type="file" name="front" id="front-img" accept=".jpeg, .png, .jpg, .svg" />
-                    </div>
-                    <div class="id-card__behind col-lg-5 g-0">
-                      <label for="behind-img"> Mặt sau </label>
-                      <input type="file" name="behind" id="behind-img" accept=".jpeg, .png, .jpg, .svg" />
-                    </div>
+        <div class="text__title-body">Thanh Toán</div>
+        <div class="payment row">
+          <div class="payment-tickets col-lg-6"></div>
+
+          <div class="payment-info col-lg-6">
+            <form action="" class="payment-info__form">
+              <div class="payment-info__customer">
+                <label for="full-name">Họ và tên:</label>
+                <input type="text" name="" id="full-name" />
+              </div>
+              <div class="payment-info__email">
+                <label for="email">Email:</label>
+                <input type="text" name="" id="email" />
+              </div>
+              <div class="payment-info__phone">
+                <label for="phone">Số điện thoại:</label>
+                <input type="text" name="" id="phone" />
+              </div>
+              <div class="payment-sale">
+                <label for="apply">Áp dụng thẻ sinh viên </label>
+                <input type="radio" name="apply" id="apply" />
+                <label for="no-apply">Không áp dụng </label>
+                <input type="radio" name="apply" id="no-apply" />
+                <div class="id-card row">
+                  <div class="id-card__front col-lg-5 g-0">
+                    <label for="front-img"> Mặt trước </label>
+                    <input type="file" name="front" id="front-img" accept=".jpeg, .png, .jpg, .svg" />
+                  </div>
+                  <div class="id-card__behind col-lg-5 g-0">
+                    <label for="behind-img"> Mặt sau </label>
+                    <input type="file" name="behind" id="behind-img" accept=".jpeg, .png, .jpg, .svg" />
                   </div>
                 </div>
-                <div class="payment-info__bank">
-                  <input type="radio" name="bank" id="tpbank" />
-                  <label for="tpbank">
-                    <img src="./assets/img/bank/TPbank.png" alt="" class="bank" style="background-color: #6f38c5" />
-                  </label>
+              </div>
+              <div class="payment-info__bank">
+                <input type="radio" name="bank" id="tpbank" />
+                <label for="tpbank">
+                  <img src="./assets/img/bank/TPbank.png" alt="" class="bank" style="background-color: #6f38c5" />
+                </label>
 
-                  <input type="radio" name="bank" id="techbank" />
-                  <label for="techbank">
-                    <img src="./assets/img/bank/Techcombank.png" alt="" class="bank" />
-                  </label>
+                <input type="radio" name="bank" id="techbank" />
+                <label for="techbank">
+                  <img src="./assets/img/bank/Techcombank.png" alt="" class="bank" />
+                </label>
 
-                  <input type="radio" name="bank" id="acb" />
-                  <label for="acb">
-                    <img src="./assets/img/bank/ACB.png" alt="" class="bank" />
-                  </label>
+                <input type="radio" name="bank" id="acb" />
+                <label for="acb">
+                  <img src="./assets/img/bank/ACB.png" alt="" class="bank" />
+                </label>
 
-                  <input type="radio" name="bank" id="saccom" />
-                  <label for="saccom">
-                    <img src="./assets/img/bank/Sacombank.png" alt="" class="bank" />
-                  </label>
+                <input type="radio" name="bank" id="saccom" />
+                <label for="saccom">
+                  <img src="./assets/img/bank/Sacombank.png" alt="" class="bank" />
+                </label>
 
-                  <input type="radio" name="bank" id="visa" />
-                  <label for="visa">
-                    <img src="./assets/img/bank/Visa.png" alt="" class="bank" />
-                  </label>
+                <input type="radio" name="bank" id="visa" />
+                <label for="visa">
+                  <img src="./assets/img/bank/Visa.png" alt="" class="bank" />
+                </label>
 
-                  <input type="radio" name="bank" id="mscard" />
-                  <label for="mscard">
-                    <img src="./assets/img/bank/MasterCard.png" alt="" class="bank" />
-                  </label>
-                  <div class="enter-number">
-                    <input type="text" name="" id="" placeholder="Nhập vào số tài khoản" class="enter-place" />
-                    <button type="submit" class="payment-done">Hoàn tất</button>
-                  </div>
+                <input type="radio" name="bank" id="mscard" />
+                <label for="mscard">
+                  <img src="./assets/img/bank/MasterCard.png" alt="" class="bank" />
+                </label>
+                <div class="enter-number">
+                  <input type="text" name="" id="" placeholder="Nhập vào số tài khoản" class="enter-place" />
+                  <button type="submit" class="payment-done">Hoàn tất</button>
                 </div>
-              </form>
-            </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
+    <!-- Room -->
+    <div class="room">
+      <div class="room-close">
+        <i class="fa-solid fa-xmark close-choosing"></i>
+      </div>
+      <div class="theater row">
+        <div class="screen col-lg-12">MÀN HÌNH</div>
+        <div class="col-lg-12"></div>
+        <div class="done">
+          Chọn
+        </div>
+      </div>
+      <div class="glossary">
+        <div class="chose">Đã được chọn</div>
+        <div class="choosing">Đang chọn</div>
+      </div>
 
+    </div>
     <!-- footer -->
     <div class="footer">
       <div class="contain-about row g-0">
@@ -281,11 +280,11 @@
         </div>
       </div>
     </div>
-
-    <script type="module" src="./assets/js/book.js"></script>
-    <script src="./assets/js/main.js"></script>
-    <script type="module" src="./assets/js/search.js"></script>
-    <!-- <script src="https://kit.fontawesome.com/fb8f607d12.js" crossorigin="anonymous"></script> -->
+  </div>
+  <script type="module" src="./assets/js/book.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script type="module" src="./assets/js/search.js"></script>
+  <!-- <script src="https://kit.fontawesome.com/fb8f607d12.js" crossorigin="anonymous"></script> -->
 </body>
 
 </html>

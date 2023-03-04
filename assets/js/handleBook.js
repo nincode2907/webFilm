@@ -160,7 +160,6 @@ function handleChooseSeat(arrElement) {
                 if (!arrSeat.includes(getRow + element.innerText)) {
                     arrSeat.push(getRow + element.innerText)
                     arrSeat.sort()
-                    console.log(arrSeat);
                     return arrSeat
                 }
             }
@@ -191,7 +190,9 @@ function renderForm(seat, quantity,) {
     const currencyFormat = new Intl.NumberFormat("vi-VN", { style: 'currency', currency: "VND" })
     const time = document.querySelectorAll('.display__time.check')
     const date = document.querySelector('.display.check')
-
+    const urlParams = new URLSearchParams(window.location.search)
+    const id = urlParams.get("id")
+    const item = films[id - 1] || films[0]
 
     let totalMoney = 0
     if (day == 0 || day == 6) {
@@ -200,8 +201,8 @@ function renderForm(seat, quantity,) {
     else {
         totalMoney += quantity * 90000 * time.length
     }
-    payment.innerHTML = `<div class="payment-film__name">Tên phim: ${films[JSON.parse(user)].name}</div>
-    <img src="./assets/img/films/${films[JSON.parse(user)].img}.jpg" class="payment-img" alt="" />
+    payment.innerHTML = `<div class="payment-film__name">Tên phim: ${item.name}</div>
+    <img src="./assets/img/films/${item.img}.jpg" class="payment-img" alt="" />
     <div class="payment-date">Ngày: ${date.children[0].innerText + " - " + date.children[1].innerText}</div>
     <div class="payment-time">Thời gian: ${addNodeItem(time)}</div >
     <div class="payment-seat">Vé ghế: ${seat}</div>

@@ -12,17 +12,15 @@ window.addEventListener("load", function () {
     //get id
     const urlParams = new URLSearchParams(window.location.search)
     const id = urlParams.get("id")
-    console.log(id);
-
     const rand = Math.floor(Math.random() * 5 + 2)
 
-    listFilms.setAttribute("src", `./assets/img/films/${films[JSON.parse(user)].img}.jpg`)
-    nameFilm.innerText = films[JSON.parse(user)].name
-    contentFilm.innerText = films[JSON.parse(user)].content
+    listFilms.src = "./assets/img/films/" + films[id - 1].img + ".jpg"
+    nameFilm.innerText = films[id - 1].name
+    contentFilm.innerText = films[id - 1].content
     renderDate(rand)
+    renderSeat()
     renderTime()
     applyPrice()
-    renderSeat()
 })
 
 // Date
@@ -124,4 +122,4 @@ function upload(e) {
 frontImage.addEventListener('change', upload)
 behindImage.addEventListener('change', upload)
 
-export { user }
+export { user, renderSeat }
