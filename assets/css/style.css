@@ -17,17 +17,18 @@ body {
   scroll-behavior: smooth;
 }
 
+/* 
 .main {
   max-width: 1920px;
   overflow-x: hidden;
-}
+} */
 
 .header {
   height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  /* position: relative; */
 }
 
 .header_left {
@@ -161,9 +162,11 @@ body {
   0% {
     transform: translateY(-750px) translateX(-300px);
   }
+
   75% {
     transform: translateY(0) translateX(-3px);
   }
+
   100% {
     transform: translateY(-10px) translateX(0);
   }
@@ -232,6 +235,9 @@ body {
   padding-right: 5px;
   position: relative;
   top: -1px;
+}
+
+.header_right_menu_tablet {
 }
 
 .header_right_menu_tablet_icon {
@@ -378,6 +384,9 @@ body {
   text-decoration: underline;
 }
 
+.login_wrapper_footer a:hover {
+}
+
 .swiper {
   width: 100%;
   height: 100%;
@@ -435,6 +444,7 @@ body {
   0% {
     width: 0%;
   }
+
   100% {
     width: 100%;
   }
@@ -547,6 +557,7 @@ body {
 .body_content_film_btn_seemore_icon {
   padding-left: 10px;
 }
+
 .seeMoreScroll {
   animation: seeMore 2s ease 0s 1 normal forwards;
 }

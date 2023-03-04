@@ -12,13 +12,11 @@ hmtl {
 /* BODY */
 
 .body {
-  padding: 0 140px;
-}
-
-.contain-film {
   width: 80%;
   margin: 0 auto;
 }
+
+.contain-film {}
 
 input {
   border-radius: 5px;
@@ -56,8 +54,7 @@ img.list-film {
   object-fit: cover;
 }
 
-.movie-items {
-}
+.movie-items {}
 
 .title {
   opacity: 0.5;
@@ -72,8 +69,8 @@ img.list-film {
   padding-bottom: 10px;
 }
 
-.book-date > p,
-.book-time > p {
+.book-date>p,
+.book-time>p {
   padding: 0;
   color: #a5a2a2cc;
 }
@@ -123,8 +120,7 @@ img.list-film {
   user-select: none;
 }
 
-.price-today {
-}
+.price-today {}
 
 .price-today .no-sales {
   opacity: 0.75;
@@ -152,11 +148,9 @@ img.list-film {
   border-radius: 50%;
 }
 
-.choose-seat {
-}
+.choose-seat {}
 
-.seat-cinema {
-}
+.seat-cinema {}
 
 span.class {
   display: flex;
@@ -259,7 +253,7 @@ button.form-seat:hover {
   right: 0;
   bottom: 0;
   min-height: 100vh;
-  z-index: 9;
+  z-index: 10;
   background-color: #000;
   display: none;
 }
@@ -371,24 +365,21 @@ input[type="file"] {
   text-align: center;
 }
 
-.payment-tickets > div,
-.payment-tickets > img {
+.payment-tickets>div,
+.payment-tickets>img {
   padding-bottom: 10px;
   filter: drop-shadow(5px 5px 5px #ccc);
 }
 
-.payment-tickets > div:nth-child(odd) {
+.payment-tickets>div:nth-child(odd) {
   color: #ff0000;
 }
 
-.payment-film___name {
-}
+.payment-film___name {}
 
-.payment-time {
-}
+.payment-time {}
 
-.payment-seat {
-}
+.payment-seat {}
 
 .payment-img {
   width: 300px;
@@ -399,7 +390,7 @@ input[type="file"] {
   margin: 10px 0;
 }
 
-.payment-sale > input {
+.payment-sale>input {
   margin-right: 10px;
 }
 
@@ -417,27 +408,24 @@ img.bank {
 
 .payment-info form {
   padding-left: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .payment-info__bank input[type="radio"] {
   display: none;
 }
 
-.payment-info__bank > label {
+.payment-info__bank>label {
   margin-top: 5px;
   /* margin-bottom: 10px; */
 }
 
-label:hover > img.bank {
+label:hover>img.bank {
   border: 2px solid #000;
 }
 
-.payment-info__customer > label,
-.payment-info__email > label,
-.payment-info__phone > label {
+.payment-info__customer>label,
+.payment-info__email>label,
+.payment-info__phone>label {
   width: 150px;
   margin-bottom: 10px;
 }
@@ -505,12 +493,12 @@ li.title__list-items {
   list-style: none;
 }
 
-ul > a.link-genre {
+ul>a.link-genre {
   text-decoration: none;
   color: #cccc;
 }
 
-ul > a.link-genre:hover {
+ul>a.link-genre:hover {
   color: red;
 }
 

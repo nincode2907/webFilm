@@ -16,9 +16,13 @@ window.addEventListener("load", function () {
 
     const rand = Math.floor(Math.random() * 5 + 2)
 
-    listFilms.setAttribute("src", `./assets/img/films/${films[JSON.parse(user)].img}.jpg`)
-    nameFilm.innerText = films[JSON.parse(user)].name
-    contentFilm.innerText = films[JSON.parse(user)].content
+    // listFilms.setAttribute("src", `./assets/img/films/${films[JSON.parse(user)].img}.jpg`)
+    // nameFilm.innerText = films[JSON.parse(user)].name
+    // contentFilm.innerText = films[JSON.parse(user)].content
+    console.log(listFilms);
+    listFilms.setAttribute("src", `./assets/img/films/${films[id - 1].img}.jpg`)
+    nameFilm.innerText = films[id - 1].name
+    contentFilm.innerText = films[id - 1].content
     renderDate(rand)
     renderTime()
     applyPrice()

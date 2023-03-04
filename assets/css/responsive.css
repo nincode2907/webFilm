@@ -40,8 +40,8 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: #fff;
     z-index: 9;
+    background-color: #fff;
     transform: translateX(0);
     opacity: 1;
   }
