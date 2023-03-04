@@ -85,6 +85,12 @@ img.list-film {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
 }
 
+.display:hover,
+.display__time:hover {
+  cursor: pointer;
+  background-color: #efeded;
+}
+
 .display__day {
   font-size: 0.75rem;
 }
@@ -99,14 +105,12 @@ img.list-film {
   border: 1px solid #cccc;
   border-radius: 10px;
   padding: 8px 0;
-  cursor: pointer;
   box-shadow: 5px 5px 5px #ccc;
 }
 
 .display__time.fade {
   opacity: 0.5;
-  cursor: not-allowed;
-  user-select: none;
+  pointer-events: none;
 }
 
 .price-today {}
