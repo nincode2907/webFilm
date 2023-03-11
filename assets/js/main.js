@@ -10,7 +10,7 @@ const iconInSearch = document.querySelector('.header_left_input_group_icon')
 //remove animation for header icon in search
 setTimeout(() => {
     iconInSearch.classList.remove('newbie')
-},3000)
+}, 3000)
 
 window.addEventListener("scroll", () => {
     let value = window.scrollY;

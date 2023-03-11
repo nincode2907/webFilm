@@ -8,25 +8,21 @@ const contentFilm = document.querySelector(".film-content")
 const dateFilm = document.querySelector(".book-date")
 const timeFilm = document.querySelector(".book-time")
 // Render
-window.addEventListener("load", function () {
+window.addEventListener("load",async function () {
     //get id
     const urlParams = new URLSearchParams(window.location.search)
     const id = urlParams.get("id")
-    console.log(id);
-
     const rand = Math.floor(Math.random() * 5 + 2)
-
-    // listFilms.setAttribute("src", `./assets/img/films/${films[JSON.parse(user)].img}.jpg`)
-    // nameFilm.innerText = films[JSON.parse(user)].name
-    // contentFilm.innerText = films[JSON.parse(user)].content
-    console.log(listFilms);
-    listFilms.setAttribute("src", `./assets/img/films/${films[id - 1].img}.jpg`)
+    while (!films.length) {
+        await new Promise((resolve) => setTimeout(resolve, 100));
+    }
+    listFilms.src = films[id - 1].img;
     nameFilm.innerText = films[id - 1].name
     contentFilm.innerText = films[id - 1].content
     renderDate(rand)
+    renderSeat()
     renderTime()
     applyPrice()
-    renderSeat()
 })
 
 // Date
@@ -128,4 +124,4 @@ function upload(e) {
 frontImage.addEventListener('change', upload)
 behindImage.addEventListener('change', upload)
 
-export { user }
+export { user, renderSeat }
