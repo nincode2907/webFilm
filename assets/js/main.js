@@ -22,11 +22,7 @@ if(seeMoreBtn && descriptionFade) {
         if(seeMoreTop < windowHeight - fadePoint) {
             seeMoreBtn.classList.add("seeMoreScroll");
         }
-        console.log(seeMoreTop);
-        console.log(descriptionTop);
-        console.log(windowHeight - fadePoint);
         if(descriptionTop < windowHeight - fadePoint + 75) {
-            console.log(true)
             descriptionFade.classList.add("description_fade");
         }
     })
