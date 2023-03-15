@@ -12,13 +12,25 @@ setTimeout(() => {
     iconInSearch.classList.remove('newbie')
 }, 3000)
 
-window.addEventListener("scroll", () => {
-    let value = window.scrollY;
-    if (value >= 880) {
-        seeMoreBtn.classList.add("seeMoreScroll");
-        descriptionFade.classList.add("description_fade");
-    }
-})
+if(seeMoreBtn && descriptionFade) {
+    window.addEventListener("scroll", () => {
+
+        let windowHeight = window.innerHeight;
+        let seeMoreTop = seeMoreBtn.getBoundingClientRect().top;
+        let descriptionTop = descriptionFade.getBoundingClientRect().top;
+        let fadePoint = 150;
+        if(seeMoreTop < windowHeight - fadePoint) {
+            seeMoreBtn.classList.add("seeMoreScroll");
+        }
+        console.log(seeMoreTop);
+        console.log(descriptionTop);
+        console.log(windowHeight - fadePoint);
+        if(descriptionTop < windowHeight - fadePoint + 75) {
+            console.log(true)
+            descriptionFade.classList.add("description_fade");
+        }
+    })
+}
 
 menuBtn.onclick = () => {
     menuBtn.classList.toggle("fade_menu")

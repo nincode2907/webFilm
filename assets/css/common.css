@@ -28,7 +28,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* position: relative; */
+    position: relative;
 }
 
 
@@ -237,8 +237,6 @@ body {
     top: -1px;
 }
 
-.header_right_menu_tablet {}
-
 .header_right_menu_tablet_icon {
     /* color: #a0a3a7; */
     font-size: 1rem;
@@ -428,6 +426,10 @@ body {
     color: #ddd;
 }
 
+.about  {
+    padding: 0 15px 0 0 ;
+}
+
 ul.title__list {
     padding-left: 0;
 }
@@ -454,7 +456,6 @@ ul>a.link-genre:hover {
 .insta-icon,
 .twi-icon {
     font-size: 30px;
-
     margin-right: 5px;
 }
 

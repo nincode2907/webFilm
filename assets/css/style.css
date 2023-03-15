@@ -25,7 +25,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* position: relative; */
+  position: relative;
 }
 
 .header_left {
@@ -612,11 +612,11 @@ body {
   font-size: 0.9rem;
   color: rgb(71, 69, 69);
   line-height: 1.5rem;
-  display: none;
+  transform: translateX(2550px);
 }
 
 .description_fade {
-  display: block;
+  /* display: block; */
   animation: descriptionFade 2s ease 0s 1 normal forwards;
 }
 
