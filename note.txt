@@ -12,3 +12,6 @@ bonus. chọn ghế:
 + lấy id dãy 
 -> c1: 
 
+Cách sử dụng:
+1. Dùng file json: dùng file films.json (fake)
+2. Bật sever trên local: bật server và đổi biến url trong file storageFilm.js (real)
